@@ -217,7 +217,7 @@ section {
     color: #6f7180;
 }
 
-.nav-menu a:hover,
+/* .nav-menu a:hover,
 .nav-menu .active>a,
 .nav-menu li:hover>a {
     color: #fff;
@@ -228,7 +228,21 @@ section {
 .nav-menu .active>a i,
 .nav-menu li:hover>a i {
     color: #149ddd;
+} */
+
+.nav-menu a:hover,
+.nav-menu .active > a,
+.nav-menu li:hover > a {
+    color: #fff;
+    text-decoration: none;
 }
+
+.nav-menu a:hover i,
+.nav-menu .active > a i,
+.nav-menu li:hover > a i {
+    color: #149ddd;
+}
+
 
 /* Mobile Navigation */
 .mobile-nav-toggle {
