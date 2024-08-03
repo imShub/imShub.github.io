@@ -1055,55 +1055,44 @@
     ///Side bar 
     <script>
     $(document).ready(function() {
-        // Add smooth scrolling on all links inside the sidebar
-        $(".nav-menu ul li a").on('click', function(event) {
-            // Make sure this.hash has a value before overriding default behavior
-            if (this.hash !== "") {
-                // Prevent default anchor click behavior
-                event.preventDefault();
+    // Add smooth scrolling on all links inside the sidebar
+    $(".nav-menu ul li a").on('click', function(event) {
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
 
-                // Store hash
-                var hash = this.hash;
+            // Store hash
+            var hash = this.hash;
 
-                // Using jQuery's animate() method to add smooth page scroll
-                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-                $('html, body').animate({
-                    scrollTop: $(hash).offset().top
-                }, 800, function() {
-                    // Add hash (#) to URL when done scrolling (default click behavior)
-                    window.location.hash = hash;
-                });
-            }
-        });
-
-        // Highlight the active section in the sidebar
-        $(window).on('scroll', function() {
-            var scrollPos = $(document).scrollTop();
-            $('.nav-menu a').each(function() {
-                var currLink = $(this);
-                var refElement = $(currLink.attr("href"));
-                if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-                    $('.nav-menu ul li').removeClass("active");
-                    currLink.parent().addClass("active");
-                } else {
-                    currLink.parent().removeClass("active");
-                }
+            // Using jQuery's animate() method to add smooth page scroll
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function() {
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
             });
-        });
+
+            // Add active class to the clicked menu item
+            $('.nav-menu ul li').removeClass('active');
+            $(this).parent().addClass('active');
+        }
+    });
+
+    // Highlight the active section in the sidebar while scrolling
+    $(window).on('scroll', function() {
+        var scrollDistance = $(window).scrollTop();
 
         // Highlight the active section in the nav
-            $(window).scroll(function() {
-                var scrollDistance = $(window).scrollTop();
-        
-                // Assign active class to nav links while scrolling
-                $('.section').each(function(i) {
-                    if ($(this).position().top <= scrollDistance + 100) {
-                        $('.nav-menu ul li.active').removeClass('active');
-                        $('.nav-menu ul li').eq(i).addClass('active');
-                    }
-                });
-            }).scroll();
-    });
+        $('.section').each(function(i) {
+            if ($(this).position().top <= scrollDistance + 100 && $(this).position().top + $(this).height() > scrollDistance) {
+                $('.nav-menu ul li').removeClass('active');
+                $('.nav-menu ul li a[href="#' + $(this).attr('id') + '"]').parent().addClass('active');
+            }
+        });
+    }).scroll();
+});
+
     </script>
 
 
