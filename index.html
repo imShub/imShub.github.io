@@ -1089,6 +1089,19 @@
                 }
             });
         });
+
+        // Highlight the active section in the nav
+            $(window).scroll(function() {
+                var scrollDistance = $(window).scrollTop();
+        
+                // Assign active class to nav links while scrolling
+                $('.section').each(function(i) {
+                    if ($(this).position().top <= scrollDistance + 100) {
+                        $('.nav-menu ul li.active').removeClass('active');
+                        $('.nav-menu ul li').eq(i).addClass('active');
+                    }
+                });
+            }).scroll();
     });
     </script>
 
