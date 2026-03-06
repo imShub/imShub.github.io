@@ -301,6 +301,7 @@ body:hover #cursor-follower {
   -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid transparent;
   transition: background 0.3s, border-bottom 0.3s;
+  z-index: 1000;
 }
 
 .premium-nav.scrolled {
@@ -382,14 +383,41 @@ body:hover #cursor-follower {
 
 @media (max-width: 992px) {
   .nav-links {
-    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(10, 10, 12, 0.95);
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    z-index: 998;
+    pointer-events: none;
+  }
+
+  .nav-links.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-links a {
+    font-size: 1.5rem;
+    font-weight: 600;
   }
 
   .mobile-menu-btn {
     display: block;
+    z-index: 1000;
   }
 
-  /* Hide resume btn on very small screens for simplicity */
   .premium-nav .btn-primary {
     display: none;
   }
@@ -483,6 +511,7 @@ section:not(#hero)::after {
 .text-gradient {
   background: linear-gradient(135deg, var(--accent-cyan), #a1c4fd);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -585,6 +614,107 @@ section:not(#hero)::after {
 
 .hero-visual:hover .iphone-mockup {
   transform: rotateY(-5deg) rotateX(2deg) translateY(-10px);
+}
+
+@media (max-width: 992px) {
+  .iphone-mockup {
+    transform: none !important;
+    animation: floatingPhone 4s ease-in-out infinite;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), 0 0 30px rgba(66, 165, 245, 0.4);
+    margin-top: 2rem;
+  }
+}
+
+@keyframes floatingPhone {
+  0% {
+    transform: translateY(0);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), 0 0 30px rgba(66, 165, 245, 0.4);
+  }
+
+  50% {
+    transform: translateY(-15px);
+    box-shadow: 0 35px 60px rgba(0, 0, 0, 0.8), 0 0 50px rgba(66, 165, 245, 0.6);
+    scale: 0.9;
+  }
+}
+
+.floating-orb {
+  scale: 0.7;
+}
+
+@keyframes floatOrb {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  33% {
+    transform: translate(15px, -25px) rotate(5deg);
+  }
+
+  66% {
+    transform: translate(-10px, 15px) rotate(-5deg);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+.hero-visual::before {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(66, 165, 245, 0.1), transparent 70%);
+  filter: blur(50px);
+  z-index: -1;
+  animation: glowMove 10s infinite alternate;
+}
+
+@keyframes glowMove {
+  from {
+    transform: translate(-10%, -10%);
+  }
+
+  to {
+    transform: translate(10%, 10%);
+  }
+}
+
+.heartbeat-icon {
+  animation: heartbeat 2s infinite;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+    text-shadow: 0 0 10px rgba(66, 165, 245, 0.8);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+
+.pulse-glow {
+  animation: pulseGlow 4s infinite alternate;
+}
+
+@keyframes pulseGlow {
+  from {
+    filter: drop-shadow(0 0 5px rgba(39, 201, 63, 0.2));
+  }
+
+  to {
+    filter: drop-shadow(0 0 20px rgba(39, 201, 63, 0.6));
+  }
 }
 
 .iphone-notch {
@@ -1409,39 +1539,122 @@ section:not(#hero)::after {
 }
 
 .chatbot-toggle {
-  width: 60px;
-  height: 60px;
+  width: 65px;
+  height: 65px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
-  color: white;
-  border: none;
-  font-size: 1.8rem;
+  background: var(--bg-surface);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   cursor: pointer;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), 0 0 20px rgba(66, 165, 245, 0.4);
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s;
-  animation: pulseButton 2s infinite;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .chatbot-toggle:hover {
-  transform: scale(1.1) rotate(10deg);
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6), 0 0 30px rgba(138, 43, 226, 0.6);
+  transform: scale(1.1);
+  border-color: var(--accent-cyan);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7), 0 0 20px rgba(66, 165, 245, 0.2);
 }
 
-@keyframes pulseButton {
-  0% {
-    box-shadow: 0 0 0 0 rgba(66, 165, 245, 0.7);
+.ai-core {
+  position: relative;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner-core {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, var(--accent-cyan), var(--accent-blue));
+  opacity: 0.3;
+  filter: blur(8px);
+  animation: coreGlow 3s ease-in-out infinite alternate;
+}
+
+.outer-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid rgba(66, 165, 245, 0.3);
+  border-top-color: var(--accent-cyan);
+  animation: rotateCore 4s linear infinite;
+}
+
+.pulse-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px solid var(--accent-cyan);
+  opacity: 0;
+  animation: pulseCore 2s ease-out infinite;
+}
+
+.chat-status-dot {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  width: 12px;
+  height: 12px;
+  background: #27c93f;
+  border-radius: 50%;
+  border: 2px solid var(--bg-surface);
+  box-shadow: 0 0 10px rgba(39, 201, 63, 0.8);
+  z-index: 3;
+}
+
+@keyframes coreGlow {
+  from {
+    transform: scale(0.8);
+    opacity: 0.2;
   }
 
-  70% {
-    box-shadow: 0 0 0 15px rgba(66, 165, 245, 0);
+  to {
+    transform: scale(1.1);
+    opacity: 0.5;
+  }
+}
+
+@keyframes rotateCore {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulseCore {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
   }
 
   100% {
-    box-shadow: 0 0 0 0 rgba(138, 43, 226, 0);
+    transform: scale(1.8);
+    opacity: 0;
   }
+}
+
+.header-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(66, 165, 245, 0.1);
+  border: 1px solid rgba(66, 165, 245, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .chatbot-window {
@@ -1585,5 +1798,52 @@ section:not(#hero)::after {
   .floating-chatbot {
     bottom: 20px;
     right: 20px;
+  }
+}
+
+/* --------------- MAIL APP FORM --------------- */
+.mail-container {
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.mail-container::after {
+  content: 'STAMP';
+  position: absolute;
+  top: 60px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.2);
+  transform: rotate(15deg);
+  border-radius: 4px;
+}
+
+.mail-container input:focus,
+.mail-container textarea:focus {
+  background: rgba(255, 255, 255, 0.02) !important;
+}
+
+.mail-container form button:hover {
+  box-shadow: 0 0 30px rgba(138, 43, 226, 0.4);
+  transform: translateY(-3px) scale(1.02);
+}
+
+/* Biometric/Glassy field highlight */
+.mail-container input,
+.mail-container textarea {
+  transition: background 0.3s;
+}
+
+@media (max-width: 992px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
   }
 }

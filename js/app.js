@@ -35,9 +35,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* ==================================
-       2. Navigation Scrolled State
+       2. Navigation Scrolled State & Mobile Menu
     ================================== */
     const navbar = document.getElementById('navbar');
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             navbar.classList.add('scrolled');
@@ -45,6 +48,32 @@ document.addEventListener('DOMContentLoaded', () => {
             navbar.classList.remove('scrolled');
         }
     });
+
+    if (mobileMenuBtn && navLinks) {
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+
+            // Toggle icon
+            const icon = mobileMenuBtn.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Close menu when a link is clicked
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            });
+        });
+    }
 
     /* ==================================
        3. Scroll Reveal Animations
@@ -89,6 +118,23 @@ document.addEventListener('DOMContentLoaded', () => {
             // Reset to default on leave
             phoneMockup.style.transform = `rotateY(-15deg) rotateX(5deg)`;
         });
+    }
+
+    /* ==================================
+       4.5 Phone Unlock Interaction
+    ================================== */
+    const phoneLockScreen = document.getElementById('phoneLockScreen');
+    const phoneHomeScreen = document.getElementById('phoneHomeScreen');
+
+    if (phoneLockScreen && phoneHomeScreen) {
+        const unlockPhone = () => {
+            phoneLockScreen.style.transform = 'translateY(-100%)';
+            phoneHomeScreen.style.opacity = '1';
+            phoneHomeScreen.style.transform = 'scale(1)';
+            phoneHomeScreen.style.pointerEvents = 'all';
+        };
+        // Simple click event is better for mobile to avoid scroll trapping
+        phoneLockScreen.addEventListener('click', unlockPhone);
     }
 });
 
