@@ -40,8 +40,10 @@
             <a href="#projects" class="hover-target">Works</a>
             <a href="#experience" class="hover-target">Experience</a>
             <a href="#contact" class="hover-target">Contact</a>
+            <a href="old_portfolio/index.html" class="hover-target" style="color: var(--accent-purple);">Old V1 <i
+                    class="fa-solid fa-clock-rotate-left" style="font-size:0.8rem;"></i></a>
         </div>
-        <a href="assets/resume/Shubham_Waghmare's_Resume.pdf" target="_blank" class="btn-primary hover-target"><i
+        <a href="Shubham_Waghmare_Resume.pdf" target="_blank" class="btn-primary hover-target"><i
                 class="fa-solid fa-file-pdf"></i> Resume</a>
         <!-- Mobile Menu Toggle -->
         <button class="mobile-menu-btn d-md-none hover-target"><i class="fa-solid fa-bars"></i></button>
@@ -341,7 +343,8 @@
             <div class="banner-project tilt-effect reveal-up" style="transform-style: preserve-3d;">
                 <div class="shine"></div>
                 <div class="project-banner">
-                    <img src="img/portfolio/portfolio-5.png" alt="Azume Community App Banner">
+                    <img src="img/portfolio/portfolio-5.png" alt="Azume Community App Banner"
+                        style="object-position: center; object-fit: contain; padding: 2rem; background: #000;">
                 </div>
                 <div class="project-info" style="transform: translateZ(30px);">
                     <div class="tags"><span>Flutter</span><span>Firebase</span><span>Dart</span></div>
@@ -361,7 +364,8 @@
             <div class="banner-project reverse tilt-effect reveal-up delay-1" style="transform-style: preserve-3d;">
                 <div class="shine"></div>
                 <div class="project-banner">
-                    <img src="img/portfolio/portfolio-6.png" alt="ArtSathi App Banner">
+                    <img src="img/portfolio/portfolio-6.png" alt="ArtSathi App Banner"
+                        style="object-position: center; object-fit: contain; padding: 2rem; background: #222;">
                 </div>
                 <div class="project-info" style="transform: translateZ(30px);">
                     <div class="tags"><span>Flutter</span><span>UI/UX Design</span></div>
@@ -381,7 +385,8 @@
             <div class="banner-project tilt-effect reveal-up delay-1" style="transform-style: preserve-3d;">
                 <div class="shine"></div>
                 <div class="project-banner">
-                    <img src="img/portfolio/portfolio-4.jpg" alt="DigiFarmer App Banner">
+                    <img src="img/portfolio/portfolio-4.jpg" alt="DigiFarmer App Banner"
+                        style="object-position: center; object-fit: contain; padding: 2rem; background: #0a1f10;">
                 </div>
                 <div class="project-info" style="transform: translateZ(30px);">
                     <div class="tags"><span>AI / ML</span><span>Flutter</span><span>Python</span></div>
@@ -401,9 +406,9 @@
                 <div class="banner-project tilt-effect reveal-up"
                     style="display: flex; flex-direction: column; height: 100%; transform-style: preserve-3d;">
                     <div class="shine"></div>
-                    <div class="project-banner" style="height: 250px; background: #0A1128;">
+                    <div class="project-banner" style="height: 250px; background: #000;">
                         <img src="img/portfolio/portfolio-2.png" alt="ARHomes Decor Visualization"
-                            style="object-position: top; opacity: 0.8;">
+                            style="object-position: center; object-fit: contain; padding: 1rem;">
                         <h3 class="outfit-font"
                             style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 2rem; text-shadow: 0 5px 15px rgba(0,0,0,0.5);">
                             ARHomes</h3>
@@ -419,8 +424,9 @@
                 <div class="banner-project tilt-effect reveal-up"
                     style="display: flex; flex-direction: column; height: 100%; transform-style: preserve-3d;">
                     <div class="shine"></div>
-                    <div class="project-banner" style="height: 250px;">
-                        <img src="img/portfolio/portfolio-2.png" alt="Wallpaper Hub App" style="object-position: top;">
+                    <div class="project-banner" style="height: 250px; background: #111;">
+                        <img src="img/portfolio/portfolio-2.png" alt="Wallpaper Hub App"
+                            style="object-position: center; object-fit: contain; padding: 1rem;">
                     </div>
                     <div class="project-info" style="padding: 2rem; flex: 1; transform: translateZ(30px);">
                         <div class="tags"><span>Flutter</span></div>
@@ -434,13 +440,12 @@
                         </div>
                     </div>
                 </div>
-                <!-- Gym Landing Page -->
                 <div class="banner-project tilt-effect reveal-up delay-1"
                     style="display: flex; flex-direction: column; height: 100%; transform-style: preserve-3d;">
                     <div class="shine"></div>
                     <div class="project-banner" style="height: 250px;">
                         <img src="img/portfolio/portfolio-1.jpg" alt="Gym Landing Page"
-                            style="object-position: center;">
+                            style="object-position: center; object-fit: contain; padding: 10px; background: #000;">
                     </div>
                     <div class="project-info" style="padding: 2rem; flex: 1; transform: translateZ(30px);">
                         <div class="tags"><span>HTML</span><span>CSS</span><span>Bootstrap</span></div>
@@ -562,6 +567,35 @@
                 <div class="msg sent" style="opacity: 0.7;">
                     Typing a new message...
                 </div>
+            </div>
+
+            <!-- Chat Prompts -->
+            <div class="chat-prompts"
+                style="display: flex; gap: 8px; padding: 10px 20px; overflow-x: auto; background: rgba(255,255,255,0.02); border-top: 1px solid var(--border-color); scrollbar-width: none;">
+                <span class="chat-prompt-chip"
+                    style="white-space: nowrap; padding: 6px 14px; border-radius: 20px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); font-size: 0.85rem; cursor: pointer; color: var(--text-primary); transition: 0.3s;"
+                    onmouseover="this.style.background='var(--accent-cyan)'; this.style.color='#000';"
+                    onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.color='var(--text-primary)';"
+                    onclick="document.querySelector('.imessage-textfield').value = this.innerText; document.querySelector('.imessage-input form').dispatchEvent(new Event('submit', {cancelable: true, bubbles: true}));">👋
+                    Say Hi to Shubham!</span>
+                <span class="chat-prompt-chip"
+                    style="white-space: nowrap; padding: 6px 14px; border-radius: 20px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); font-size: 0.85rem; cursor: pointer; color: var(--text-primary); transition: 0.3s;"
+                    onmouseover="this.style.background='var(--accent-cyan)'; this.style.color='#000';"
+                    onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.color='var(--text-primary)';"
+                    onclick="document.querySelector('.imessage-textfield').value = 'Is he looking for a job?'; document.querySelector('.imessage-input form').dispatchEvent(new Event('submit', {cancelable: true, bubbles: true}));">💼
+                    Seeking Job?</span>
+                <span class="chat-prompt-chip"
+                    style="white-space: nowrap; padding: 6px 14px; border-radius: 20px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); font-size: 0.85rem; cursor: pointer; color: var(--text-primary); transition: 0.3s;"
+                    onmouseover="this.style.background='var(--accent-purple)'; this.style.color='#fff';"
+                    onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.color='var(--text-primary)';"
+                    onclick="document.querySelector('.imessage-textfield').value = 'Where does he live?'; document.querySelector('.imessage-input form').dispatchEvent(new Event('submit', {cancelable: true, bubbles: true}));">🏠
+                    Where does he live?</span>
+                <span class="chat-prompt-chip"
+                    style="white-space: nowrap; padding: 6px 14px; border-radius: 20px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); font-size: 0.85rem; cursor: pointer; color: var(--text-primary); transition: 0.3s;"
+                    onmouseover="this.style.background='#FF5F56'; this.style.color='#fff';"
+                    onmouseout="this.style.background='rgba(255,255,255,0.05)'; this.style.color='var(--text-primary)';"
+                    onclick="document.querySelector('.imessage-textfield').value = 'Roast me! 🔥'; document.querySelector('.imessage-input form').dispatchEvent(new Event('submit', {cancelable: true, bubbles: true}));">🔥
+                    Roast me!</span>
             </div>
 
             <!-- Keyboard Input Area -->

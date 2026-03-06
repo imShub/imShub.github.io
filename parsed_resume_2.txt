@@ -1,0 +1,163 @@
+SHUBHAM MADHAV WAGHMARE 
+Mumbai, Maharashtra, India | waghmareshubham132@gmail.com | +91-7710981416 
+
+Portfolio: imshub.github.io | GitHub: @imShub | LinkedIn: @imshub 
+ 
+
+PROFESSIONAL SUMMARY 
+Passionate software engineer specializing in Flutter mobile app development with hands-on experience in building high- 
+performance, scalable, and production-ready applications. Currently working as a Jr. Flutter Developer at Intellect Software 
+Solutions, developing financial and trading applications with real-time data integration. Previously contributed to CRM and 
+automation solutions during internships at Ace360Degree and ICICI Prudential. Known for solving real-world problems, 
+collaborating effectively in teams, and delivering clean, maintainable code. 
+
+EDUCATION 
+Bachelor of Engineering (AI & DS) 
+University of Mumbai 
+Vidyavardhini's College of Engineering and Technology, Vasai 
+Dec 2021 - May 2025 
+● 
+Cumulative CGPA : 7.55/10  
+● 
+Relevant  Coursework :  Database Management System; Software Engineering; 
+
+HSC (Computer Science) 
+Bharatiya Vidya Bhavan's College, Andheri 
+June 2019 - June 2021 
+● 
+Major in Computer Science 
+Percentage - 89 % 
+● 
+Relevant  Coursework : Fundamentals  of  Computer Science; C++ Programming  Language;  
+Web Development (HTML, CSS, JavaScript) 
+
+WORK EXPERIENCE 
+ 
+
+Intellect Software Solutions Pvt. Ltd. 
+Borivali, Maharashtra 
+Jr. Flutter Developer 
+Jul 2025 – Present 
+ 
+Contributed to multiple live Flutter applications, enhancing UI/UX and fixing production-level bugs to 
+improve app performance and stability. 
+ 
+Implemented key modules in Axis Trader, including simplified login, guest access, SDK integrations, and API 
+encryption for secure communication. 
+ 
+Integrated CleverTap SDK for push notifications and event tracking. 
+ 
+
+Ace 360 Degree 
+Mumbai, Maharashtra 
+Flutter& Web Backend Developer Intern 
+Jun 2024 – Feb 2025 
+● 
+Re-developed and optimized existing Flutter applications based on new client requirements and performance 
+improvements. 
+
+● 
+Managed bug fixes and developed new features for the CRM system using PHP (CodeIgniter), MySQL, and Ajax. 
+
+● 
+Interacted directly with clients to gather feature requests and ensure successful implementation. 
+ 
+
+ICICI Prudential Life Insurance Company Limited 
+Mumbai, Maharashtra 
+IT Intern - RPA Team 
+Dec 2023 – Jan 2024 
+● 
+Acquired hands-on experience with RPA technologies and Control-M Application. 
+● 
+Developed insightful software usage reports to assist new joiners. 
+ 
+
+PROJECTS 
+ 
+
+Axis Trader App (Live Project) – Intellect Software Solutions 
+Jul 2025 - Present 
+● 
+Contributed to the app’s core features including simplified login, guest access, and SDK integrations, ensuring 
+seamless and secure user onboarding. 
+● 
+Improved app stability through API encryption and critical bug fixes ensuring secure performance. 
+● 
+Integrated CleverTap SDK for push notifications and event tracking. 
+● 
+Skills: Flutter · Dart · REST APIs · Firebase · CleverTap · Mobile Application Development 
+
+CRM Module Contributions for Multiple Clients – Ace360Degree 
+June 2024 – Feb 2025 
+● 
+Contributed to enhancing existing CRM modules for clients like EPC Pvt. Ltd. and Amigo Academy, 
+focusing on feature additions and delivery-critical fixes. 
+● 
+Resolved bugs and implemented requested changes, including email/SMS notifications, data handling, and 
+user access updates. 
+● 
+Collaborated with the team to handle client queries, ensuring smooth handover and functionality as per 
+client expectations. 
+● 
+Skills: CodeIgniter · PHP · MySQL · Bug Fixing · Client Communication · Notifications Integration 
+ 
+
+ARHomes - AR Based Home Decor Visualization System 
+Sep 2023 - Oct 2023 
+● 
+Developed ARHomes, an innovative AR-based Home Decor Visualization System app, allowing users to 
+virtually try out furniture and visualize decor options. 
+● 
+Implemented interactive features for a seamless user experience, including a diverse furniture catalog for 
+personalized design exploration. 
+● 
+Skills: Flutter · Dart · Firebase · Software Development · Augmented Reality (AR) 
+
+ 
+
+ORGANIZATIONS 
+
+Microsoft Learn Students Club - VCET 
+Dev Associate in App Domain 
+Sep 2023 – Jul 2024 
+● 
+Contributed to app development initiatives and technical projects. 
+ 
+
+Team E-Cell - Vidyavardhini's College of Engineering and Technology 
+Technical Team Member 
+Feb 2022 – Jun 2024 
+● 
+Collaborated on entrepreneurial projects and technical solutions within the college's E-Cell. 
+ 
+
+ADDITIONAL 
+Technical Skills: 
+
+● 
+Programming Languages: C/C++, PHP, JavaScript, Dart 
+● 
+Web Technologies: HTML, CSS, Bootstrap, Ajax, 
+● 
+Frameworks and Libraries: Flutter, CodeIgniter, ASP.NET 6.0 MVC 
+● 
+Databases: MySQL, Firebase 
+● 
+Tools and Platforms: Git, Control-M, CI/CD Workflows 
+● 
+Software Development: Software Engineering, Debugging, Version Control 
+● 
+RPA Tools: Basic understanding of RPA technologies 
+● 
+Others: Adobe Photoshop 
+ 
+
+Languages: Native Proficiency in Marathi, Full Professional Proficiency in Hindi, Working Proficiency in English 
+ 
+
+Certifications & Training: OOPs Concept in C++ (Great Learning), Python Certificate (HackerRank), etc. 
+ 
+
+Awards: Winner of VCET's VNPS 2023 for developing “DigiFarmer” app; Winner of Code-o-fiesta 2023 for developing 
+“Azume" app; Runner-Up of VCET's CSI "Technical Quiz"; Runner Up of Men’s Kabaddi in VCET’s AVAHAN 2024; 

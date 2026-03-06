@@ -151,18 +151,29 @@ tiltElements.forEach(el => {
 });
 
 /* ==================================
-    7. iMessage Interface Logic
+    7. iMessage Interface Logic (Chatbot)
 ================================== */
 document.addEventListener('DOMContentLoaded', () => {
     const imessageForm = document.querySelector('.imessage-input form');
     const chatArea = document.querySelector('.imessage-chat');
 
+    // Page View Counter Logic
+    let pageViews = localStorage.getItem('shubham_page_views') || 1337;
+    pageViews = parseInt(pageViews) + 1;
+    localStorage.setItem('shubham_page_views', pageViews);
+
+    const footer = document.querySelector('.premium-footer p');
+    if (footer) {
+        const viewCounterHtml = `<br><span style="font-size: 0.8rem; color: #666;">Profile loaded <b style="color:var(--accent-cyan);">${pageViews}</b> times by amazing people!</span>`;
+        footer.insertAdjacentHTML('beforeend', viewCounterHtml);
+    }
+
     if (imessageForm && chatArea) {
         imessageForm.addEventListener('submit', (e) => {
             e.preventDefault();
             const input = imessageForm.querySelector('input');
-            const text = input.value;
-            if (text.trim() === '') return;
+            const text = input.value.trim();
+            if (text === '') return;
 
             // Remove typing indicator temporarily
             const typingIndicator = chatArea.querySelector('.msg.sent[style*="opacity"]');
@@ -174,15 +185,54 @@ document.addEventListener('DOMContentLoaded', () => {
             newMsg.textContent = text;
             chatArea.appendChild(newMsg);
 
-            // Re-append typing indicator at the end
+            // Re-append typing indicator & show it for bot "typing"
             if (typingIndicator) {
+                typingIndicator.textContent = "Shubham is typing...";
                 typingIndicator.style.display = 'block';
+                typingIndicator.style.alignSelf = 'flex-start'; // Move to left side
+                typingIndicator.style.background = 'transparent'; // No blue background
+                typingIndicator.style.color = '#fff';
                 chatArea.appendChild(typingIndicator);
             }
 
             // Clear input and scroll down
             input.value = '';
             chatArea.scrollTop = chatArea.scrollHeight;
+
+            // Generate Chatbot Response
+            setTimeout(() => {
+                const responseMsg = document.createElement('div');
+                responseMsg.className = 'msg received';
+
+                const lowerText = text.toLowerCase();
+                let reply = "That's cool! Send me an email at <strong>waghmareshubham132@gmail.com</strong> if you want to chat more serious biz. 🚀";
+
+                if (lowerText.includes('hi') || lowerText.includes('hello') || lowerText.includes('hey')) {
+                    reply = "Yooo! What's good? I'm Shubham's automated clone. He's probably busy writing some clean Flutter code rn. What can I help you with?";
+                } else if (lowerText.includes('job') || lowerText.includes('hiring') || lowerText.includes('work') || lowerText.includes('opportunity')) {
+                    reply = "Oh yeah, the main man is ALWAYS open to epic opportunities! Especially if it involves Flutter or building cool mobile apps. You hiring? 👀";
+                } else if (lowerText.includes('where') || lowerText.includes('live') || lowerText.includes('location')) {
+                    reply = "He's based out of Mumbai, mostly vibing in a dark room illuminated only by his IDE theme. Typical developer habitat! 🦇💻";
+                } else if (lowerText.includes('roast') || lowerText.includes('joke')) {
+                    reply = "I'd roast you, but my creator told me to be professional... Just kidding, your last app crashed on launch didn't it? (Sorry, it's just a joke! 😂)";
+                } else if (lowerText.includes('flutter')) {
+                    reply = "Ah, Flutter. The supreme UI toolkit! Shubham breathes Widgets and StateManagement. 💙";
+                }
+
+                responseMsg.innerHTML = reply;
+
+                // Hide typing indicator before showing response
+                if (typingIndicator) {
+                    typingIndicator.style.display = 'none';
+                    // Reset styling back to user typing style for later
+                    typingIndicator.textContent = "Typing a new message...";
+                    typingIndicator.style.alignSelf = 'flex-end';
+                    typingIndicator.style.background = '#02569B';
+                }
+
+                chatArea.appendChild(responseMsg);
+                chatArea.scrollTop = chatArea.scrollHeight;
+            }, 1800); // Simulated delay
         });
     }
 });
