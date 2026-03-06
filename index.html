@@ -619,6 +619,39 @@
         </p>
     </footer>
 
+    <!-- Floating Chatbot -->
+    <div class="floating-chatbot">
+        <button class="chatbot-toggle hover-target" id="chatbotToggle">
+            <i class="fa-solid fa-robot"></i>
+        </button>
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chatbot-header">
+                <div>
+                    <img src="img/Shubham_hero_img.jpg" alt="Shubham AI">
+                    <span>Shubham's AI</span>
+                </div>
+                <i class="fa-solid fa-xmark close-chatbot" id="closeChatbot"></i>
+            </div>
+            <div class="chatbot-messages" id="chatbotMessages">
+                <div class="msg received">Hi there! 👋 I'm Shubham's virtual assistant. Ask me anything about his
+                    skills, experience, or just say hi!</div>
+                <div class="chat-prompts floating-prompts">
+                    <span class="chat-prompt-chip" onclick="sendFloatingMsg('What are his top skills?');">🚀 Top
+                        Skills</span>
+                    <span class="chat-prompt-chip" onclick="sendFloatingMsg('Is he looking for a job?');">💼
+                        Hiring</span>
+                    <span class="chat-prompt-chip" onclick="sendFloatingMsg('Roast me!');">🔥 Roast</span>
+                </div>
+            </div>
+            <div class="chatbot-input-area">
+                <form id="floatingChatForm">
+                    <input type="text" placeholder="Type a message..." required class="hover-target">
+                    <button type="submit" class="hover-target"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <!-- Scripting -->
     <script src="js/app.js"></script>
 </body>
