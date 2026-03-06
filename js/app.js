@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.add('locked-scroll');
         setTimeout(() => {
             preloader.classList.add('hidden');
+            preloader.style.pointerEvents = 'none'; // Allow instant interaction behind it
             document.body.classList.remove('locked-scroll');
             setTimeout(() => {
                 preloader.style.display = 'none';
@@ -16,23 +17,65 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /* ==================================
-       1. Custom Cursor Logic
+       1. Custom Cursor Logic (Ideatic Experience)
     ================================== */
     const cursor = document.getElementById('cursor');
     const cursorFollower = document.getElementById('cursor-follower');
+    const hoverTargets = document.querySelectorAll('.hover-target, a, button, .fingerprint-scanner, .project-card, .skill-node');
 
-    if (cursor && cursorFollower) {
+    if (cursor && cursorFollower && !('ontouchstart' in window)) {
+        let mouseX = 0, mouseY = 0;
+        let dotX = 0, dotY = 0;
+        let ringX = 0, ringY = 0;
+
         document.addEventListener('mousemove', (e) => {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-
-            // Add a little delay for the follower for a smooth trailing effect
-            setTimeout(() => {
-                cursorFollower.style.left = e.clientX + 'px';
-                cursorFollower.style.top = e.clientY + 'px';
-            }, 50);
+            mouseX = e.clientX;
+            mouseY = e.clientY;
         });
+
+        // Smooth physics-based trailing
+        const renderCursor = () => {
+            dotX += (mouseX - dotX) * 0.25;
+            dotY += (mouseY - dotY) * 0.25;
+            ringX += (mouseX - ringX) * 0.12;
+            ringY += (mouseY - ringY) * 0.12;
+
+            cursor.style.transform = `translate(${dotX}px, ${dotY}px) translate(-50%, -50%)`;
+            cursorFollower.style.transform = `translate(${ringX}px, ${ringY}px) translate(-50%, -50%)`;
+
+            requestAnimationFrame(renderCursor);
+        };
+        renderCursor();
+
+        // Magnetic hover effects
+        const targets = [...hoverTargets, ...document.querySelectorAll('.btn-primary, .btn-secondary')];
+        targets.forEach(target => {
+            target.addEventListener('mouseenter', () => {
+                cursor.classList.add('hover-active');
+                cursorFollower.classList.add('hover-active');
+            });
+            target.addEventListener('mouseleave', () => {
+                cursor.classList.remove('hover-active');
+                cursorFollower.classList.remove('hover-active');
+            });
+        });
+    } else {
+        if (cursor) cursor.style.display = 'none';
+        if (cursorFollower) cursorFollower.style.display = 'none';
     }
+
+    // Fallback for dynamically added targets or missing selectors
+    document.addEventListener('mouseover', (e) => {
+        if (e.target.closest('.hover-target, a, button')) {
+            cursor?.classList.add('hover-active');
+            cursorFollower?.classList.add('hover-active');
+        } else {
+            cursor?.classList.remove('hover-active');
+            cursorFollower?.classList.remove('hover-active');
+        }
+    });
+
+
 
     /* ==================================
        2. Navigation Scrolled State & Mobile Menu
@@ -64,12 +107,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Close menu when a link is clicked
-        navLinks.querySelectorAll('a').forEach(link => {
+        // Close menu when clicking links on mobile
+        document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
                 const icon = mobileMenuBtn.querySelector('i');
-                icon.classList.remove('fa-xmark');
                 icon.classList.add('fa-bars');
             });
         });
@@ -125,17 +167,83 @@ document.addEventListener('DOMContentLoaded', () => {
     ================================== */
     const phoneLockScreen = document.getElementById('phoneLockScreen');
     const phoneHomeScreen = document.getElementById('phoneHomeScreen');
+    const fingerprintScanner = document.querySelector('.fingerprint-scanner');
 
     if (phoneLockScreen && phoneHomeScreen) {
-        const unlockPhone = () => {
-            phoneLockScreen.style.transform = 'translateY(-100%)';
-            phoneHomeScreen.style.opacity = '1';
-            phoneHomeScreen.style.transform = 'scale(1)';
-            phoneHomeScreen.style.pointerEvents = 'all';
+        const unlockPhone = (e) => {
+            if (e) {
+                if (e.cancelable) e.preventDefault();
+                e.stopPropagation();
+            }
+
+            // Guaranteed immediate state change
+            phoneLockScreen.style.pointerEvents = 'none';
+            phoneLockScreen.style.cursor = 'default';
+
+            // Professional feedback sequence
+            if (fingerprintScanner) {
+                fingerprintScanner.style.transform = 'scale(0.8) rotate(5deg)';
+                fingerprintScanner.style.background = 'rgba(39, 201, 63, 0.5)';
+                fingerprintScanner.style.borderColor = '#27C93F';
+                fingerprintScanner.style.boxShadow = '0 0 40px rgba(39, 201, 63, 0.6)';
+            }
+
+            setTimeout(() => {
+                phoneLockScreen.style.transform = 'translateY(-110%)';
+                phoneHomeScreen.style.opacity = '1';
+                phoneHomeScreen.style.transform = 'scale(1)';
+                phoneHomeScreen.style.pointerEvents = 'all';
+            }, 100);
         };
-        // Simple click event is better for mobile to avoid scroll trapping
+
+        // Aggressive click/touch capturing
         phoneLockScreen.addEventListener('click', unlockPhone);
+        phoneLockScreen.addEventListener('touchstart', unlockPhone, { passive: false });
+
+        if (fingerprintScanner) {
+            fingerprintScanner.addEventListener('click', unlockPhone);
+            fingerprintScanner.addEventListener('touchstart', unlockPhone, { passive: false });
+        }
     }
+
+    /* ==================================
+       4.6 Flutter Fireworks Easter Egg
+    ================================== */
+    const easterEggBtn = document.getElementById('easterEggBtn');
+    if (easterEggBtn) {
+        easterEggBtn.addEventListener('click', (e) => {
+            const rect = easterEggBtn.getBoundingClientRect();
+            const startX = rect.left + rect.width / 2;
+            const startY = rect.top + rect.height / 2;
+
+            for (let i = 0; i < 20; i++) {
+                const particle = document.createElement('i');
+                particle.className = 'devicon-flutter-plain flutter-particle';
+
+                // Randomize trajectory
+                const angle = (Math.random() * Math.PI) - (Math.PI / 2); // Upwards arc
+                const velocity = 100 + Math.random() * 200;
+                const endX = Math.sin(angle) * velocity;
+                const endY = -Math.cos(angle) * velocity - (Math.random() * 100);
+
+                particle.style.left = startX + 'px';
+                particle.style.top = startY + 'px';
+                particle.style.setProperty('--end-x', endX);
+                particle.style.setProperty('--end-y', endY);
+
+                // Add slight randomness to animation duration to make it feel natural
+                particle.style.animationDuration = (2 + Math.random()) + 's';
+
+                document.body.appendChild(particle);
+
+                // Clean up after animation
+                setTimeout(() => {
+                    particle.remove();
+                }, 3000);
+            }
+        });
+    }
+
 });
 
 /* ==================================
@@ -294,18 +402,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const chatbotMessages = document.getElementById('chatbotMessages');
 
     if (chatbotToggle && chatbotWindow && closeChatbot) {
-        chatbotToggle.addEventListener('click', () => {
+        const openChat = (e) => {
+            if (e) e.preventDefault();
             chatbotWindow.classList.add('active');
             chatbotToggle.style.display = 'none';
-        });
+        };
 
-        closeChatbot.addEventListener('click', () => {
+        const closeChat = (e) => {
+            if (e) e.preventDefault();
             chatbotWindow.classList.remove('active');
             setTimeout(() => {
                 chatbotToggle.style.display = 'flex';
             }, 300); // Wait for transition
-        });
+        };
+
+        chatbotToggle.addEventListener('click', openChat);
+        chatbotToggle.addEventListener('touchstart', openChat, { passive: false });
+
+        closeChatbot.addEventListener('click', closeChat);
+        closeChatbot.addEventListener('touchstart', closeChat, { passive: false });
     }
+
 
     if (floatingChatForm && chatbotMessages) {
         floatingChatForm.addEventListener('submit', (e) => {
@@ -369,13 +486,32 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Global function for prompt chips in floating chatbot
-    window.sendFloatingMsg = function (text) {
-        if (!floatingChatForm) return;
-        const input = floatingChatForm.querySelector('input');
-        input.value = text;
-        floatingChatForm.dispatchEvent(new Event('submit', { cancelable: true, bubbles: true }));
+    // Using a more robust listener approach
+    const setupChips = () => {
+        const chips = document.querySelectorAll('.chat-prompt-chip');
+        chips.forEach(chip => {
+            const handleChip = (e) => {
+                const msg = chip.getAttribute('data-msg');
+                if (msg) window.sendFloatingMsg(msg);
+            };
+            chip.addEventListener('click', handleChip);
+            chip.addEventListener('touchstart', handleChip, { passive: true });
+        });
     };
+
+    window.sendFloatingMsg = (text) => {
+        const input = floatingChatForm.querySelector('input');
+        if (!input) return;
+        input.value = text;
+
+        // Use a generic event trigger for better compatibility
+        const event = new Event('submit', { cancelable: true, bubbles: true });
+        floatingChatForm.dispatchEvent(event);
+    };
+
+    setupChips();
 });
+
 /* ==================================
     8. Live Visitor & Uptime Simulator
 ================================== */
@@ -402,6 +538,52 @@ function initLiveStats() {
     }, 1000);
 }
 
+/* ==================================
+    9. Quick Look PDF Viewer
+================================== */
+function initPdfViewer() {
+    const resumeBtn = document.getElementById('resumeBtn');
+    const pdfModal = document.getElementById('pdfModal');
+    const closePdf = document.getElementById('closePdf');
+    const pdfBackdrop = document.getElementById('pdfBackdrop');
+
+    if (!pdfModal) return;
+
+    const showModal = (e) => {
+        if (e) e.preventDefault();
+        pdfModal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Lock scrolling
+    };
+
+    if (resumeBtn) {
+        resumeBtn.addEventListener('click', showModal);
+        resumeBtn.addEventListener('touchstart', showModal, { passive: false });
+    }
+
+    const hideModal = (e) => {
+        if (e) e.preventDefault();
+        pdfModal.classList.remove('active');
+        document.body.style.overflow = ''; // Unlock scrolling
+    };
+
+    if (closePdf) {
+        closePdf.addEventListener('click', hideModal);
+        closePdf.addEventListener('touchstart', hideModal, { passive: false });
+    }
+
+    if (pdfBackdrop) {
+        pdfBackdrop.addEventListener('click', hideModal);
+        pdfBackdrop.addEventListener('touchstart', hideModal, { passive: false });
+    }
+
+
+    // Close on ESC key
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') hideModal();
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     initLiveStats();
+    initPdfViewer();
 });
