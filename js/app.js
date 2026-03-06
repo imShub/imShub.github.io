@@ -376,3 +376,32 @@ document.addEventListener('DOMContentLoaded', () => {
         floatingChatForm.dispatchEvent(new Event('submit', { cancelable: true, bubbles: true }));
     };
 });
+/* ==================================
+    8. Live Visitor & Uptime Simulator
+================================== */
+function initLiveStats() {
+    const counterEl = document.getElementById('visitTotal');
+    const uptimeEl = document.getElementById('visitCounter');
+
+    // Simple Local visit counter simulation
+    let visits = localStorage.getItem('portfolio_visits') || 254;
+    visits = parseInt(visits) + 1;
+    localStorage.setItem('portfolio_visits', visits);
+
+    // Format counter (000XXX)
+    counterEl.textContent = String(visits).padStart(5, '0');
+
+    // System Uptime Clock
+    let totalSeconds = 0;
+    setInterval(() => {
+        totalSeconds++;
+        const h = Math.floor(totalSeconds / 3600);
+        const m = Math.floor((totalSeconds % 3600) / 60);
+        const s = totalSeconds % 60;
+        uptimeEl.textContent = `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+    }, 1000);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    initLiveStats();
+});
