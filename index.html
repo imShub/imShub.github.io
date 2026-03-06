@@ -3,1100 +3,590 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="I'm Shubham Madhav Waghmare. I'm a Final-Year Engineering Student pursuing my engineering from
-        Vidyavardhini's College Of Engineering and Technology in specialization in Artificial
-        Inteligence and Data Science. Aspiring to transform ideas into code, I'm a dynamic software
-        developer proficient in Flutter, Firebase, and full-stack Web technologies.I'm Passionate about
-        Coding and Technology. My strength is I am a quick learner and I can adjust myself in any new
-        environment. I'm looking to collaborate on
-        Artificial Intelligence, Data Science, Cross-Platform App Development and Web
-        Development. ">
-    <meta name="keywords"
-        content="Shubham Waghmare, Shubham Madhav Waghmare, HTML, CSS, JavaScript,Shubham Waghmare's Portfolio,Shubham Waghmare Portfolio, Shubham Portfolio,Shubham Waghmare Portfolio">
-    <meta name="author" content="Shubham Waghmare">
-    <meta name="image" property="og:image"
-        content="https://drive.google.com/file/d/1FRrWVSLNf_1GWjOxToOLFgIDqkF-xCaI/view?usp=sharing">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shubham Waghmare's Portfolio | Flutter App Developer, Full Stack Web Developer & AI and Data Science
-        Enthusiast</title>
-    <!-- CSS -->
-    <link rel="shortcut icon" href="img/Shubham_Portfolio_PP.jpg" type="image/x-icon">
+    <title>Shubham Waghmare | Flutter Mobile App Developer</title>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/owl-crousel.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
-<!--     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="assets/boxicons/css/boxicons.min.css">
-    <link rel="stylesheet" href="assets/icofont/icofont.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/aos/aos.css">
-    <link rel="stylesheet" href="assets/fontawsome/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="img/Shubham_Portfolio_PP.jpg">
-    <!-- google fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Raleway:wght@400;500;700&display=swap"
-        rel="stylesheet">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5755053716366081"
-        crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <!-- header -->
-    <header id="header">
-        <div class="d-flex flex-column">
-            <div class="profile">
-                <img src="img/Shubham_Portfolio_PP.jpg" alt="" class="img-fluid rounded-circle">
-                <h1 class="text-light name mt-2"><a href="index.html">Shubham Waghmare</a></h1>
-                <div class="social-links mt-3 text-center">
-                    <a href="https://github.com/imShub/" target="_blank" class="github"><i
-                            class="bx bxl-github"></i></a>
-                    <a href="https://www.linkedin.com/in/imshub/" target="_blank" class="linkedin"><i
-                            class="bx bxl-linkedin"></i></a>
-                    <a href="https://twitter.com/_shhubham_" target="_blank" class="twitter"><i
-                            class="bx bxl-twitter"></i></a>
-                    <a href="https://www.instagram.com/imshubh.zip/" target="_blank" class="instagram"><i
-                            class="bx bxl-instagram"></i></a>
-                    <a href="#" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
-                </div>
-            </div>
 
-            <!-- Navigation -->
-    <nav class="nav-menu">
-        <ul>
-            <li class="active"><a href="index.html"><i class="bx bx-home"></i><span>Home</span></a></li>
-            <li><a href="#about"><i class="bx bx-user"></i><span>About</span></a></li>
-            <li><a href="#resume"><i class="bx bx-file"></i><span>Resume</span></a></li>
-            <li><a href="#portfolio"><i class="bx bx-book-content"></i><span>Portfolio</span></a></li>
-            <li><a href="#services"><i class="bx bx-server"></i><span>Services</span></a></li>
-            <li><a href="#contact"><i class="bx bx-envelope"></i><span>Contact</span></a></li>
-        </ul>
+    <!-- Awesome Preloader -->
+    <div id="preloader">
+        <div class="loader-content">
+            <div class="loader-text">Shubham</div>
+            <div class="loader-dot"></div>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div id="cursor"></div>
+    <div id="cursor-follower"></div>
+
+    <!-- Backgrounds -->
+    <div class="noise-overlay"></div>
+    <div class="ambient-gradient"></div>
+
+    <!-- Navigation -->
+    <nav class="premium-nav" id="navbar">
+        <a href="#" class="logo hover-target">Shubham<span>.</span></a>
+        <div class="nav-links">
+            <a href="#about" class="hover-target">About</a>
+            <a href="#skills" class="hover-target">Skills</a>
+            <a href="#projects" class="hover-target">Works</a>
+            <a href="#experience" class="hover-target">Experience</a>
+            <a href="#contact" class="hover-target">Contact</a>
+        </div>
+        <a href="assets/resume/Shubham_Waghmare's_Resume.pdf" target="_blank" class="btn-primary hover-target"><i
+                class="fa-solid fa-file-pdf"></i> Resume</a>
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-btn d-md-none hover-target"><i class="fa-solid fa-bars"></i></button>
     </nav>
-    <!-- End Nav Menu -->
-            <button type="button" class="mobile-nav-toggle navbar-toggler d-xl-none"><i
-                    class="icofont-navigation-menu"></i></button>
-        </div>
-        
-    </header> <!-- End of header section -->
 
-    <!-- Hero Section -->
-    <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-        <div class="hero-container" data-aos="fade-out">
-            <h1 class="text-primary">Shubham Waghmare</h1>
-            <p>I am a <span class="typed"
-                    data-typed-items="Student, Flutter Developer, Web Developer, Graphic Designer,AI & DS Enthusiast, Freelancer"></span>
+    <!-- Narrative Section: Hero -->
+    <section class="hero-story container" id="home">
+        <div class="hero-grid">
+            <div class="hero-text">
+                <div class="dev-badge reveal-up"><i class="fa-brands fa-flutter" style="color: #42A5F5;"></i> Mobile OS
+                    Architect</div>
+                <h1 class="hero-title reveal-up delay-1">
+                    Hi, I'm <span class="text-gradient">Shubham</span><br>
+                    Waghmare.
+                </h1>
+                <h2 class="hero-role reveal-up delay-2">
+                    Flutter Mobile App Developer
+                </h2>
+                <p class="hero-subtitle reveal-up delay-2">
+                    I build scalable, high-performance cross-platform mobile experiences that bridge the gap between
+                    elegant UI design and robust enterprise architecture.
+                </p>
+                <div class="hero-cta reveal-up delay-3">
+                    <a href="#projects" class="btn-primary hover-target">Explore My Work <i
+                            class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></a>
+                    <a href="#contact" class="btn-secondary hover-target">Contact Me</a>
+                </div>
+
+                <div class="code-snippet-bg reveal-up delay-3">
+                    <div class="dot-row"><span class="red"></span><span class="yellow"></span><span
+                            class="green"></span></div>
+                    <code>
+                        <span class="keyword">class</span> <span class="class-name">Developer</span> { <br>
+                        &nbsp;&nbsp;<span class="type">String</span> name = <span class="string">'Shubham'</span>;<br>
+                        &nbsp;&nbsp;<span class="type">List&lt;String&gt;</span> core = [<span class="string">'Flutter'</span>, <span class="string">'Dart'</span>, <span class="string">'Firebase'</span>];<br>
+                        }
+                    </code>
+                </div>
+            </div>
+
+            <div class="hero-visual reveal-up delay-3">
+                <div class="iphone-mockup">
+                    <div class="iphone-notch"></div>
+                    <div class="iphone-screen" style="position: relative;">
+                        <!-- Lock Screen -->
+                        <div class="screen-content" id="phoneLockScreen"
+                            style="position: absolute; top:0; left:0; width:100%; height:100%; z-index: 2; transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); cursor: pointer; padding: 0; display: flex; flex-direction: column;"
+                            onclick="this.style.transform='translateY(-100%)'; document.getElementById('phoneHomeScreen').style.opacity='1'; document.getElementById('phoneHomeScreen').style.transform='scale(1)'; document.getElementById('phoneHomeScreen').style.pointerEvents='all';">
+                            <!-- Status Bar -->
+                            <div
+                                style="display: flex; justify-content: space-between; padding: 15px 20px 0; font-size: 0.75rem; color: rgba(255,255,255,0.8); width: 100%;">
+                                <span class="phone-time-dynamic">10:30 AM</span>
+                                <span><i class="fa-solid fa-signal" style="margin-right: 3px;"></i><i
+                                        class="fa-solid fa-wifi" style="margin-right: 5px;"></i><i
+                                        class="fa-solid fa-battery-full"></i></span>
+                            </div>
+
+                            <!-- Profile Info -->
+                            <div style="text-align: center; margin-top: 50px;">
+                                <img src="img/Shubham_hero_img.jpg" alt="Profile"
+                                    style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent-cyan); box-shadow: 0 10px 20px rgba(0,0,0,0.5);"
+                                    onerror="this.src='https://placehold.co/100x100?text=S'">
+                                <h3 class="outfit-font" style="margin-top: 15px; font-size: 1.2rem;">Shubham W.</h3>
+                                <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 5px;">Flutter
+                                    Developer</p>
+                            </div>
+
+                            <!-- Notification/Widget -->
+                            <div class="app-widget"
+                                style="text-align: left; margin: auto 20px 20px; background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); padding: 15px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.1); transform: none; opacity: 1; animation: none;">
+                                <div style="display: flex; gap: 10px; align-items: center; margin-bottom: 5px;">
+                                    <i class="fa-brands fa-flutter" style="color: #42A5F5;"></i>
+                                    <strong style="font-size: 0.85rem;">Portfolio Ready</strong>
+                                </div>
+                                <p style="font-size: 0.75rem; color: rgba(255,255,255,0.7); margin: 0;">Tap to unlock
+                                    interactive experience.</p>
+                            </div>
+
+                            <!-- Swipe Indicator -->
+                            <div
+                                style="text-align: center; margin-bottom: 20px; animation: pulse 2s infinite alternate;">
+                                <i class="fa-solid fa-chevron-up"
+                                    style="color: rgba(255,255,255,0.7); font-size: 1.2rem;"></i>
+                                <span
+                                    style="display: block; font-size: 0.7rem; color: rgba(255,255,255,0.6); margin-top: 5px;">Tap
+                                    or Swipe up to open</span>
+                            </div>
+                        </div>
+
+                        <!-- Home Screen (Apps) -->
+                        <div id="phoneHomeScreen"
+                            style="position: absolute; top:0; left:0; width:100%; height:100%; background: #0a0a0c; z-index: 1; opacity: 0; transform: scale(0.95); transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1); display: flex; flex-direction: column; pointer-events: none;">
+                            <!-- Status Bar -->
+                            <div
+                                style="display: flex; justify-content: space-between; padding: 15px 20px 0; font-size: 0.75rem; color: rgba(255,255,255,0.8); width: 100%;">
+                                <span class="phone-time-dynamic">10:30 AM</span>
+                                <span><i class="fa-solid fa-signal" style="margin-right: 3px;"></i><i
+                                        class="fa-solid fa-battery-full"></i></span>
+                            </div>
+
+                            <!-- Content -->
+                            <div style="padding: 20px; flex: 1; overflow-y: auto;">
+                                <h4 class="outfit-font"
+                                    style="font-size: 1rem; margin-bottom: 20px; font-weight: 500; text-align: center;">
+                                    Welcome <i class="fa-regular fa-hand-spock" style="color:#ffbd2e;"></i></h4>
+
+                                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                                    <a href="#projects" class="phone-app-btn"
+                                        style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 20px 10px; text-align: center; display: block; transition: all 0.3s;"
+                                        onmouseover="this.style.background='rgba(255,255,255,0.1)'"
+                                        onmouseout="this.style.background='rgba(255,255,255,0.05)'">
+                                        <i class="fa-solid fa-briefcase"
+                                            style="font-size: 1.6rem; color: #42A5F5; margin-bottom: 10px; display: block;"></i>
+                                        <span style="font-size: 0.8rem; font-weight: 500;">Projects</span>
+                                    </a>
+                                    <a href="#skills" class="phone-app-btn"
+                                        style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 20px 10px; text-align: center; display: block; transition: all 0.3s;"
+                                        onmouseover="this.style.background='rgba(255,255,255,0.1)'"
+                                        onmouseout="this.style.background='rgba(255,255,255,0.05)'">
+                                        <i class="fa-solid fa-layer-group"
+                                            style="font-size: 1.6rem; color: #8A2BE2; margin-bottom: 10px; display: block;"></i>
+                                        <span style="font-size: 0.8rem; font-weight: 500;">Skills</span>
+                                    </a>
+                                    <a href="#experience" class="phone-app-btn"
+                                        style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 20px 10px; text-align: center; display: block; transition: all 0.3s;"
+                                        onmouseover="this.style.background='rgba(255,255,255,0.1)'"
+                                        onmouseout="this.style.background='rgba(255,255,255,0.05)'">
+                                        <i class="fa-solid fa-chart-line"
+                                            style="font-size: 1.6rem; color: #00E5FF; margin-bottom: 10px; display: block;"></i>
+                                        <span style="font-size: 0.8rem; font-weight: 500;">Journey</span>
+                                    </a>
+                                    <a href="#contact" class="phone-app-btn"
+                                        style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 20px 10px; text-align: center; display: block; transition: all 0.3s;"
+                                        onmouseover="this.style.background='rgba(255,255,255,0.1)'"
+                                        onmouseout="this.style.background='rgba(255,255,255,0.05)'">
+                                        <i class="fa-solid fa-envelope"
+                                            style="font-size: 1.6rem; color: #ff5f56; margin-bottom: 10px; display: block;"></i>
+                                        <span style="font-size: 0.8rem; font-weight: 500;">Contact</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Bottom Dock -->
+                            <div
+                                style="background: rgba(255,255,255,0.05); backdrop-filter: blur(10px); padding: 15px 20px; display: flex; justify-content: space-around; border-top: 1px solid rgba(255,255,255,0.1);">
+                                <a href="https://github.com/imShub" target="_blank"
+                                    style="font-size: 1.3rem; color: #fff;"><i class="fa-brands fa-github"></i></a>
+                                <a href="https://linkedin.com/in/imshub" target="_blank"
+                                    style="font-size: 1.3rem; color: #42A5F5;"><i class="fa-brands fa-linkedin"></i></a>
+                                <div style="font-size: 1.3rem; color: #ffbd2e; cursor: pointer;"
+                                    onclick="document.getElementById('phoneHomeScreen').style.opacity='0'; document.getElementById('phoneHomeScreen').style.transform='scale(0.95)'; document.getElementById('phoneHomeScreen').style.pointerEvents='none'; document.getElementById('phoneLockScreen').style.transform='translateY(0)';">
+                                    <i class="fa-solid fa-lock"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Infinite Marquee -->
+    <div class="marquee">
+        <div class="marquee-content">
+            <span><i class="fa-brands fa-flutter"></i> FLUTTER DEVELOPER</span>
+            <span><i class="fa-brands fa-apple"></i> IOS PLATFORM</span>
+            <span><i class="fa-brands fa-android"></i> ANDROID PLATFORM</span>
+            <span><i class="fa-solid fa-database"></i> FIREBASE EXPERT</span>
+            <span><i class="fa-solid fa-compass-drafting"></i> UI/UX ARCHITECT</span>
+            <span><i class="fa-brands fa-php"></i> FULL STACK WEB</span>
+            <span><i class="fa-solid fa-brain"></i> AI & DS ENTHUSIAST</span>
+        </div>
+    </div>
+
+    <!-- Narrative Section: About Me -->
+    <section class="container" id="about">
+        <div class="section-header reveal-up">
+            <h2 class="section-title">Who I Am</h2>
+            <p class="section-desc">The human behind the code.</p>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-image reveal-up">
+                <div class="image-wrapper">
+                    <img src="img/Shubham_hero_img.jpg" alt="Shubham Waghmare Portrait"
+                        onerror="this.src='https://placehold.co/500x600?text=Shubham+Portrait'">
+                    <div class="floating-badge hover-target"><i class="fa-brands fa-flutter"
+                            style="color: #42A5F5;"></i> Flutter Expert</div>
+                </div>
+            </div>
+            <div class="about-content reveal-up delay-1">
+                <h3 class="outfit-font" style="font-size: 2rem; margin-bottom: 1rem; color: var(--text-primary);">
+                    Developer Story</h3>
+                <p>I am a highly motivated <strong>Artificial Intelligence and Data Science Graduate</strong> from
+                    Vidyavardhini's College Of Engineering and Technology (2021-2025). My true passion lies in
+                    <strong>mobile app
+                        development</strong> and transforming innovative ideas into functional, beautiful code.
+                </p>
+                <p style="margin-top: 1rem;">Beyond my coursework, I was a Technical Team Member of the E-Cell and a Dev
+                    Associate in the Microsoft Learn Students Club. Currently working as a Jr. Flutter Developer at
+                    Intellect Software
+                    Solutions, I focus on delivering seamless, user-friendly interfaces backed by robust back-end
+                    integrations for both Android and iOS systems.</p>
+
+                <div class="stats-grid">
+                    <div class="stat-box hover-target">
+                        <h4 class="text-gradient">1.5+</h4>
+                        <p>Years Coding</p>
+                    </div>
+                    <div class="stat-box hover-target">
+                        <h4 class="text-gradient">10+</h4>
+                        <p>Projects</p>
+                    </div>
+                    <div class="stat-box hover-target">
+                        <h4 class="text-gradient">4+</h4>
+                        <p>Awards</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 2rem;">
+                    <a href="#contact" class="premium-link hover-target">Let's Connect <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Narrative Section: Skills (Toolkit) -->
+    <section class="container" id="skills">
+        <div class="section-header reveal-up text-center mx-auto" style="text-align: center;">
+            <h2 class="section-title">System Architecture</h2>
+            <p class="section-desc mx-auto" style="margin: 0 auto;">The languages and frameworks powering the ecosystem.
             </p>
-            <div class="social-links">
-                <a href="https://github.com/imShub/" target="_blank" title="Github" class="github"><i
-                        class="bx bxl-github"></i></a>
-                <a href="https://www.linkedin.com/in/imshub/" target="_blank" title="LinkedIn" class="linkedin"><i
-                        class="bx bxl-linkedin"></i></a>
-                <a href="https://twitter.com/_shhubham_" target="_blank" title="Twitter" class="twitter"><i
-                        class="bx bxl-twitter"></i></a>
-                <a href="https://www.instagram.com/imshubh.zip/" target="_blank" title="Instagram" class="instagram"><i
-                        class="bx bxl-instagram"></i></a>
-                <a href="https://www.facebook.com/WaghmareShubh" target="_blank" title="Facebook" class="facebook">
-                    <i class="bx bxl-facebook" aria-hidden="true"></i>
-                </a>
+        </div>
+
+        <div class="toolkit-panel reveal-up delay-1">
+            <div class="toolkit-header">
+                <div class="window-controls">
+                    <span class="wc-red"></span><span class="wc-yellow"></span><span class="wc-green"></span>
+                </div>
+                <div class="toolkit-tabs">
+                    <div class="t-tab active"><i class="fa-brands fa-flutter" style="color:#42A5F5;"></i> Engine_Core
+                    </div>
+                </div>
+            </div>
+            <div class="toolkit-body">
+                <div class="tk-category text-gradient">Mobile OS & Frameworks</div>
+                <div class="toolkit-grid">
+                    <div class="tk-chip hover-target"><i class="fa-brands fa-flutter" style="color:#42A5F5;"></i>
+                        Flutter</div>
+                    <div class="tk-chip hover-target"><i class="fa-solid fa-code" style="color:#00E5FF;"></i> Dart</div>
+                    <div class="tk-chip hover-target"><i class="fa-brands fa-android" style="color:#3DDC84;"></i>
+                        Android SDK</div>
+                    <div class="tk-chip hover-target"><i class="fa-brands fa-apple"></i> iOS</div>
+                </div>
+
+                <div class="tk-category text-gradient" style="margin-top:2rem;">Backend & Cloud infrastructure</div>
+                <div class="toolkit-grid">
+                    <div class="tk-chip hover-target"><i class="fa-brands fa-php" style="color:#777BB4;"></i> PHP &
+                        CodeIgniter</div>
+                    <div class="tk-chip hover-target"><i class="fa-solid fa-server" style="color:#FF416C;"></i> ASP.NET
+                        MVC</div>
+                    <div class="tk-chip hover-target"><i class="fa-solid fa-fire" style="color:#FFA000;"></i> Firebase
+                    </div>
+                    <div class="tk-chip hover-target"><i class="fa-solid fa-database" style="color:#336791;"></i> MySQL
+                    </div>
+                    <div class="tk-chip hover-target"><i class="fa-brands fa-node-js" style="color:#F7DF1E;"></i>
+                        JavaScript</div>
+                </div>
+
+                <div class="tk-category text-gradient" style="margin-top:2rem;">Developer Tools & UI/UX</div>
+                <div class="toolkit-grid">
+                    <div class="tk-chip hover-target"><i class="fa-brands fa-git-alt" style="color:#F1502F;"></i> Git /
+                        GitHub</div>
+                    <div class="tk-chip hover-target"><i class="fa-solid fa-network-wired" style="color:#8A2BE2;"></i>
+                        REST APIs</div>
+                    <div class="tk-chip hover-target"><i class="fa-brands fa-python" style="color:#3776AB;"></i> Python
+                    </div>
+                    <div class="tk-chip hover-target"><i class="fa-solid fa-pen-nib" style="color:#FF00FF;"></i> UI/UX
+                        Design</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Narrative Section: Projects Story Showcase -->
+    <section class="projects-section container" id="projects">
+        <div class="section-header reveal-up">
+            <h2 class="section-title">Selected Works</h2>
+            <p class="section-desc">A deep dive into platforms and mobile applications I've brought to life, featuring
+                my role as a Flutter App Developer.</p>
+        </div>
+
+        <div class="projects-masonry">
+
+            <!-- Azume -->
+            <div class="banner-project tilt-effect reveal-up" style="transform-style: preserve-3d;">
+                <div class="shine"></div>
+                <div class="project-banner">
+                    <img src="img/portfolio/portfolio-5.png" alt="Azume Community App Banner">
+                </div>
+                <div class="project-info" style="transform: translateZ(30px);">
+                    <div class="tags"><span>Flutter</span><span>Firebase</span><span>Dart</span></div>
+                    <h3>Azume<br>Entrepreneurs Community</h3>
+                    <p>An innovative mobile platform designed to connect, empower, and inspire entrepreneurs worldwide.
+                        Features gamification, seamless networking, and product showcasing.</p>
+                    <div style="display: flex; gap: 15px; margin-top: 1rem;">
+                        <a href="https://github.com/imShub/azume" target="_blank" class="premium-link hover-target"><i
+                                class="fa-brands fa-github"></i> GitHub</a>
+                        <a href="https://imShub.github.io/azume/" target="_blank" class="premium-link hover-target"><i
+                                class="fa-solid fa-eye"></i> Live Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ArtSathi (Reverse Layout) -->
+            <div class="banner-project reverse tilt-effect reveal-up delay-1" style="transform-style: preserve-3d;">
+                <div class="shine"></div>
+                <div class="project-banner">
+                    <img src="img/portfolio/portfolio-6.png" alt="ArtSathi App Banner">
+                </div>
+                <div class="project-info" style="transform: translateZ(30px);">
+                    <div class="tags"><span>Flutter</span><span>UI/UX Design</span></div>
+                    <h3>ArtSathi<br>Local Art Haven</h3>
+                    <p>Discover and support local artisans with ArtSathi, the go-to online marketplace for handmade
+                        treasures. Includes intuitive chat functionality for direct engagement with creators.</p>
+                    <div style="display: flex; gap: 15px; margin-top: 1rem;">
+                        <a href="https://github.com/imShub/artsathi" target="_blank"
+                            class="premium-link hover-target"><i class="fa-brands fa-github"></i> GitHub</a>
+                        <a href="https://imShub.github.io/artsathi/" target="_blank"
+                            class="premium-link hover-target"><i class="fa-solid fa-eye"></i> Live Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DigiFarmer -->
+            <div class="banner-project tilt-effect reveal-up delay-1" style="transform-style: preserve-3d;">
+                <div class="shine"></div>
+                <div class="project-banner">
+                    <img src="img/portfolio/portfolio-4.jpg" alt="DigiFarmer App Banner">
+                </div>
+                <div class="project-info" style="transform: translateZ(30px);">
+                    <div class="tags"><span>AI / ML</span><span>Flutter</span><span>Python</span></div>
+                    <h3>DigiFarmer<br>Assistant App</h3>
+                    <p>An Artificial Intelligence and Machine Learning backed application designed to perform farming
+                        predictions such as Crop Quality, Yield Prediction, and Disease Detection.</p>
+                    <div style="display: flex; gap: 15px; margin-top: 1rem;">
+                        <a href="https://github.com/imShub/digifarmer/" target="_blank"
+                            class="premium-link hover-target"><i class="fa-brands fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Web Projects & Others -->
+            <div class="sub-projects-grid">
+                <!-- ARHomes -->
+                <div class="banner-project tilt-effect reveal-up"
+                    style="display: flex; flex-direction: column; height: 100%; transform-style: preserve-3d;">
+                    <div class="shine"></div>
+                    <div class="project-banner" style="height: 250px; background: #0A1128;">
+                        <img src="img/portfolio/portfolio-2.png" alt="ARHomes Decor Visualization"
+                            style="object-position: top; opacity: 0.8;">
+                        <h3 class="outfit-font"
+                            style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 2rem; text-shadow: 0 5px 15px rgba(0,0,0,0.5);">
+                            ARHomes</h3>
+                    </div>
+                    <div class="project-info" style="padding: 2rem; flex: 1; transform: translateZ(30px);">
+                        <div class="tags"><span>Flutter</span><span>Firebase</span><span>AR</span></div>
+                        <h3 style="font-size: 1.5rem;">ARHomes System</h3>
+                        <p style="font-size: 0.95rem; margin-bottom: 1rem;">Innovative AR-based Home Decor Visualization
+                            app allowing users to virtually try out furniture and visualize options.</p>
+                    </div>
+                </div>
+                <!-- Wallpaper Hub -->
+                <div class="banner-project tilt-effect reveal-up"
+                    style="display: flex; flex-direction: column; height: 100%; transform-style: preserve-3d;">
+                    <div class="shine"></div>
+                    <div class="project-banner" style="height: 250px;">
+                        <img src="img/portfolio/portfolio-2.png" alt="Wallpaper Hub App" style="object-position: top;">
+                    </div>
+                    <div class="project-info" style="padding: 2rem; flex: 1; transform: translateZ(30px);">
+                        <div class="tags"><span>Flutter</span></div>
+                        <h3 style="font-size: 1.5rem;">WallpaperHub</h3>
+                        <p style="font-size: 0.95rem; margin-bottom: 1rem;">Cross-platform application for discovering
+                            high-quality wallpapers.</p>
+                        <div style="margin-top: auto;">
+                            <a href="https://github.com/imShub/WallpaperHub_App" target="_blank"
+                                class="premium-link hover-target" style="font-size: 0.95rem;"><i
+                                    class="fa-brands fa-github"></i> View</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Gym Landing Page -->
+                <div class="banner-project tilt-effect reveal-up delay-1"
+                    style="display: flex; flex-direction: column; height: 100%; transform-style: preserve-3d;">
+                    <div class="shine"></div>
+                    <div class="project-banner" style="height: 250px;">
+                        <img src="img/portfolio/portfolio-1.jpg" alt="Gym Landing Page"
+                            style="object-position: center;">
+                    </div>
+                    <div class="project-info" style="padding: 2rem; flex: 1; transform: translateZ(30px);">
+                        <div class="tags"><span>HTML</span><span>CSS</span><span>Bootstrap</span></div>
+                        <h3 style="font-size: 1.5rem;">Gym Landing Page</h3>
+                        <p style="font-size: 0.95rem; margin-bottom: 1rem;">High-performance, responsive landing page
+                            for a Fitness Center.</p>
+                        <div style="margin-top: auto;">
+                            <a href="https://github.com/imShub/Fitness_Center_Landing_Page/" target="_blank"
+                                class="premium-link hover-target" style="font-size: 0.95rem;"><i
+                                    class="fa-brands fa-github"></i> View</a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>
-    </section> <!-- End of Hero section -->
+    </section>
 
-    <!-- =========Main========== -->
-    <main id="main">
+    <!-- Narrative Section: Experience Timeline -->
+    <section class="container" id="experience">
+        <div class="section-header reveal-up text-center" style="text-align: center;">
+            <h2 class="section-title">Professional Journey</h2>
+            <p class="section-desc mx-auto" style="margin: 0 auto;">Where I have made an impact.</p>
+        </div>
 
-        <!-- About Section -->
-        <section id="about" class="about section-bg">
-            <div class="container">
-                <div class="section-title">
-                    <h2><span>About</span></h2>
-                    <p data-aos="fade-in">I'm <span
-                            style="color: #149ddd; font-weight:600; font-style: oblique;">Shubham Madhav
-                            Waghmare.</span> I'm a Final-Year Engineering Student pursuing my engineering from
-                        Vidyavardhini's College Of Engineering and Technology in specialization in Artificial
-                        Inteligence and Data Science. Aspiring to transform ideas into code, I'm a dynamic software
-                        developer proficient in Flutter, Firebase, and full-stack Web technologies.I'm Passionate about
-                        Coding and Technology. My strength is I am a quick learner and I can adjust myself in any new
-                        environment. I'm looking to collaborate on
-                        Artificial Intelligence, Data Science, Cross-Platform App Development and Web
-                        Development.
-                    </p>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4" data-aos="fade-up-right">
-                        <img src="img/Shubham_hero_img.jpg" class="img-fluid rounded-3" alt="Profile Picture">
-                    </div>
-                    <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-up-left">
-                        <h3>Engineering Student &amp; Flutter App Developer</h3>
-                        <p class="fst-italic">
-                            I am very passionate about learning new things. I have good knowledge about website
-                            development. Currently, I'm working on Full Stack Web Development and Cross-Platform App
-                            Development Using Flutter with Dart.
-                        </p>
-                        <div class="row">
-                            <div class="col-lg-5">
-                                <ul>
-                                    <li><i class="icofont-rounded-right"></i><strong>Birthday: </strong>17 May 2004</li>
-                                    <li><i class="icofont-rounded-right"></i><strong>Website: </strong>imshub.github.io
-                                    </li>
-                                    <li><i class="icofont-rounded-right"></i><strong>Phone: </strong>+91-7710981416</li>
-                                    <li><i class="icofont-rounded-right"></i><strong>City: </strong>Mumbai, Maharashtra
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-7">
-                                <ul>
-                                    <li><i class="icofont-rounded-right"></i><strong>Age: </strong>20</li>
-                                    <li><i class="icofont-rounded-right"></i><strong>Degree: </strong>Bachelor's in
-                                        Engineering
-                                    </li>
-                                    <li><i class="icofont-rounded-right"></i><strong>Email:
-                                        </strong>waghmareshubham132@gmail.com</li>
-                                    <li><i class="icofont-rounded-right"></i><strong>Freelance: </strong>Available</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <p>In my spare time, I like to gain an understanding of new technologies and programming
-                            languages. My other hobby besides software related things is playing outdoor sports like
-                            cricket, kabbadi and exploring new places and experience new cultures. In the future, I
-                            would like to contribute to Artificial Intelligence, Data Science, Web Development, and
-                            Cross-Platform App Development using Flutter.</p>
+        <div class="timeline">
+            <!-- Job 1 -->
+            <div class="timeline-item reveal-up">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">Jul 2025 – Present</span>
+                    <h3>Jr. Flutter Developer</h3>
+                    <h4>Intellect Software Solutions Pvt. Ltd.</h4>
+                    <p>Working on enterprise-level financial and trading applications. I contributed to multiple
+                        real-time data integration modules within the <strong>Axis Trader App</strong>, including secure
+                        login flows, guest access, API encryption, and integrating the CleverTap SDK.</p>
+                    <div class="tags" style="margin-top: 15px; margin-bottom: 0;">
+                        <span>Flutter</span><span>Dart</span><span>REST APIs</span><span>CleverTap</span>
                     </div>
                 </div>
             </div>
-        </section>
-        <!--End of About Section -->
 
-
-
-        <!-- Skills Sections -->
-        <section id="skills" class="skills">
-            <div class="container">
-                <div class="section-title">
-                    <h2 class="mb-3">Skills</h2>
-                    <p>I am a quick learner and also I loved to keep learning new things. So, till this date I learn
-                        some technologies which are given below.</p>
-                </div>
-            </div>
-            <div class="skills-content px-5">
-                <div class="row" data-aos="fade-left">
-                    <div class="col-lg-3">
-                        <div class="card">
-                            <img class="card-img-top img-fluid m-auto mt-2" style="width: 50%;" src="img/html.png"
-                                alt="">
-                            <div class="card-body">
-                                <p class="card-text">
-                                <div class="progress">
-                                    <span class="skill">HTML <i class="val">90%</i></span>
-                                    <div class="progress-bar-wrap">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="90"
-                                            aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="card">
-                            <img class="card-img-top img-fluid w-50 m-auto mt-2" src="img/css.png" alt="">
-                            <div class="card-body">
-                                <p class="card-text">
-                                <div class="progress">
-                                    <span class="skill">CSS <i class="val">80%</i></span>
-                                    <div class="progress-bar-wrap">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="80"
-                                            aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="card ">
-                            <img class="card-img-top img-fluid m-auto mt-2 p-3" style="width: 50%;"
-                                src="img/Bootstrap.png" alt="">
-                            <div class="card-body">
-                                <p class="card-text">
-                                <div class="progress">
-                                    <span class="skill">Bootstrap Framework <i class="val">80%</i></span>
-                                    <div class="progress-bar-wrap">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="80"
-                                            aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="card">
-                            <img class="card-img-top img-fluid w-50 m-auto mt-2" src="img/javascript.png" alt="">
-                            <div class="card-body">
-                                <p class="card-text">
-                                <div class="progress">
-                                    <span class="skill">JavaScript <i class="val">50%</i></span>
-                                    <div class="progress-bar-wrap">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="50"
-                                            aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br>
-                <div class="row" data-aos="fade-right">
-                    <div class="col-lg-3">
-                        <div class="card " data-aos="">
-                            <img class="card-img-top img-fluid m-auto mt-2 p-2" style="width: 45%;" src="img/C.png"
-                                alt="">
-                            <div class="card-body">
-                                <p class="card-text">
-                                <div class="progress">
-                                    <span class="skill">C Language<i class="val">70%</i></span>
-                                    <div class="progress-bar-wrap">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="80"
-                                            aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="card">
-                            <img class="card-img-top img-fluid m-auto mt-2 p-2" style="width: 65%;" src="img/cpp.png"
-                                alt="">
-                            <div class="card-body">
-                                <p class="card-text">
-                                <div class="progress">
-                                    <span class="skill">C++ Language <i class="val">70%</i></span>
-                                    <div class="progress-bar-wrap">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="70"
-                                            aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="card">
-                            <img class="card-img-top img-fluid w-50 m-auto mt-2 p-2" src="img/python.png" alt="">
-                            <div class="card-body">
-                                <p class="card-text">
-                                <div class="progress">
-                                    <span class="skill">Python <i class="val">80%</i></span>
-                                    <div class="progress-bar-wrap">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="80"
-                                            aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="card">
-                            <img class="card-img-top img-fluid m-auto mt-1 " style="width: 53%;"
-                                src="img/flutterjpg.jpg" alt="">
-                            <div class="card-body">
-                                <p class="card-text">
-                                <div class="progress">
-                                    <span class="skill">Flutter &amp; Dart <i class="val">50%</i></span>
-                                    <div class="progress-bar-wrap">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="50"
-                                            aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <br>
-
-                <div class="row" data-aos="fade-left">
-                    <div class="col-lg-3">
-                        <div class="card " data-aos="">
-                            <img class="card-img-top img-fluid m-auto mt-2 p-2" style="width: 65%;" src="img/asp.jpg"
-                                alt="">
-                            <div class="card-body">
-                                <p class="card-text">
-                                <div class="progress">
-                                    <span class="skill">ASP.NET 6.0 MVC<i class="val">50%</i></span>
-                                    <div class="progress-bar-wrap">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="60"
-                                            aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="card">
-                            <img class="card-img-top img-fluid m-auto mt-2 p-2" style="width: 80%;" src="img/php.png"
-                                alt="">
-                            <div class="card-body">
-                                <p class="card-text">
-                                <div class="progress">
-                                    <span class="skill">PHP Language <i class="val">50%</i></span>
-                                    <div class="progress-bar-wrap">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="50"
-                                            aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="card">
-                            <img class="card-img-top img-fluid w-50 m-auto mt-2 p-2" src="img/photoshop.jpg" alt="">
-                            <div class="card-body">
-                                <p class="card-text">
-                                <div class="progress">
-                                    <span class="skill">Adobe Photoshop <i class="val">50%</i></span>
-                                    <div class="progress-bar-wrap">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="50"
-                                            aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="card">
-                            <!-- <img class="card-img-top img-fluid m-auto mt-1 " style="width: 53%;"
-                                src="img/flutterjpg.jpg" alt="">
-                            <div class="card-body">
-                                <p class="card-text">
-                                <div class="progress">
-                                    <span class="skill">Flutter &amp; Dart <i class="val">50%</i></span>
-                                    <div class="progress-bar-wrap">
-                                        <div class="progress-bar" role="progressbar" aria-valuenow="50"
-                                            aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                </p>
-                            </div> -->
-                        </div>
-                    </div>
-                </div>
-
-                <!-- <div class="col-lg-6" data-aos="fade-up">
-                    <div class="progress">
-                        <span class="skill">HTML <i class="val">90%</i></span>
-                        <div class="progress-bar-wrap">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="progress">
-                        <span class="skill">CSS <i class="val">80%</i></span>
-                        <div class="progress-bar-wrap">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="progress">
-                        <span class="skill">Bootsrap Framework <i class="val">80%</i></span>
-                        <div class="progress-bar-wrap">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="progress">
-                        <span class="skill">Flutter <i class="val">60%</i></span>
-                        <div class="progress-bar-wrap">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="progress">
-                        <span class="skill">CSS <i class="val">80%</i></span>
-                        <div class="progress-bar-wrap">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="progress">
-                        <span class="skill">JavaScript <i class="val">50%</i></span>
-                        <div class="progress-bar-wrap">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                </div> -->
-            </div>
-        </section>
-        <script>
-            // Skills section
-            $('.skills-content').waypoint(function () {
-                $('.progress .progress-bar').each(function () {
-                    $(this).css("width", $(this).attr("aria-valuenow") + '%');
-                });
-            }, {
-                offset: '80%'
-            });
-        </script>
-        <!-- End of Skills Sections -->
-
-        <!-- ======= Resume Section ======= -->
-        <section id="resume" class="resume section-bg">
-            <div class="container">
-
-                <div class="section-title">
-                    <h2 class="mb-2 pb-1">Resume</h2>
-                    <div class="text-center mt-10">
-                        <a class="btn resume-download-btn line-btn-dark btn-icon btn-radius"
-                            href="assets\resume\Shubham Waghmare's Resume.pdf" target="_blank" data-aos="fade-up"
-                            title=""><i class="fa fa-download" aria-hidden="true"></i> Download Resume</a>
-                    </div>
-
-                </div>
-
-                <div class="row p-2">
-                    <div class="col-lg-6" data-aos="fade-up">
-                        <h3 class="resume-title">Sumary</h3>
-                        <div class="resume-item pb-0">
-                            <h4>Shubham Madhav Waghmare</h4>
-                            <p><em>Aspiring to transform ideas into code, I'm a dynamic software developer proficient in
-                                    Flutter, Firebase, and full-stack Web technologies. My journey involves crafting
-                                    functional and aesthetic websites and apps, leading impactful projects like
-                                    "DigiFarmer" and "Azume." Let's code something extraordinary!</em></p>
-                            <ul>
-                                <li>Mumbai, Maharashtra</li>
-                                <li>(+91) 77109 81416</li>
-                                <li>waghmareshubham132@gmail.com</li>
-                            </ul>
-                        </div>
-
-                        <h3 class="resume-title">Education</h3>
-                        <div class="resume-item">
-                            <h4>Bachelor's of Engineering </h4>
-                            <h5>2021 - 2025</h5>
-                            <p><em>Vidyavardhini's College Of Engineering and Technology, Vasai</em></p>
-                            <p>In VCET, I'm pursuing BE in specialization in Artificial Intelligence and Data Science.
-                            </p>
-                        </div>
-                        <div class="resume-item">
-                            <h4>HSC &dash; Computer Science</h4>
-                            <h5>2019 - 2021</h5>
-                            <p><em>Bhartiya Vidya Bhavan's College, Andheri</em></p>
-                            <p>In this my course I learned basic of programming languages, other than this I learned
-                                basic of C++ Concepts like Input/Output, different types of loops, array, function's,
-                                etc.</p>
-                        </div>
-
-                        <h3 class="resume-title">Personal Projects</h3>
-                        <div class="resume-item">
-                            <h4>Azume - An Entrepreneurs Community App</h4>
-                            <h5>June, 2023 - September, 2023</h5>
-                            <p><em>Flutter Mobile App</em></p>
-                            <ul>
-                                <li>Led UI design using Flutter for a seamless and intuitive user experience.</li>
-                                <li>Implemented Firebase for authentication, ensuring secure user
-                                    interactions.</li>
-                                <li>Contributed to fostering a global community for networking and
-                                    knowledge sharing among entrepreneurs.</li>
-                            </ul>
-                        </div>
-                        <div class="resume-item">
-                            <h4>DigiFarmer - An AI&ML Based Farmer Assistance App</h4>
-                            <h5>April, 2022 - October, 2022</h5>
-                            <p><em>Flutter Mobile App</em></p>
-                            <ul>
-                                <li>Spearheaded the development of the complete Flutter app UI for DigiFarmer, ensuring
-                                    a seamless and intuitive user interface for
-                                    farmers and stakeholders.</li>
-                                <li>Integrated TensorFlow Lite and LGBM Classifier Algorithm into the
-                                    app's back-end, enhancing crop quality prediction.</li>
-                            </ul>
-                        </div>
-                        <div class="resume-item">
-                            <h4>Unused Medicine Donation System</h4>
-                            <h5>June, 2022 - October, 2022</h5>
-                            <p><em>Full-Stack Website</em></p>
-                            <ul>
-                                <li>Developed a user-friendly PHP website facilitating the donation of unused medicine.
-                                </li>
-                                <li>Implemented a secure platform for donors to submit details of available medicines,
-                                    promoting efficient donation management.</li>
-                                <li>Enhanced community welfare by connecting donors with recipients, ensuring proper
-                                    utilization of surplus medicines.</li>
-                            </ul>
-                        </div>
-
-                    </div>
-                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-                        <h3 class="resume-title">Professional Experience</h3>
-                        <div class="resume-item">
-                            <h4>Software Developer Intern</h4>
-                            <h5>June, 2023 - July, 2023</h5>
-                            <p><em>Aimed Labs</em></p>
-                            <ul>
-                                <li>Configured Flutter workspace on Ubuntu, collaborated on
-                                    GitHub, contributed through pull requests, and implemented
-                                    CI/CD workflows during Aimed Labs internship.</li>
-                                <li>Specialized in golden file testing, ensuring visual consistency
-                                    and accuracy of Flutter app UI components.</li>
-                                <li>Actively engaged in team meetings, enhancing technical
-                                    skills and deepening understanding of collaborative
-                                    development at Aimed Labs.</li>
-                                <label for="li" class="text-black fw-bolder fs-6">Skills:</label>
-                                <li>Flutter, Dart, Git and GitHub, etc.</li>
-                            </ul>
-                        </div>
-                        <div class="resume-item">
-                            <h4>Software Developer Intern</h4>
-                            <h5>May, 2022 - August, 2022</h5>
-                            <p><em>Waghmode Infotech</em></p>
-                            <ul>
-                                <li>Received comprehensive training in PHP, ASP.NET MVC, and
-                                    Flutter app development under Waghmode Infotech's
-                                    mentorship.</li>
-                                <li>Successfully completed freelancing projects for clients, developing functional and
-                                    aesthetically pleasing websites.</li>
-                                <label for="li" class="text-black fw-bolder fs-6">Skills:</label>
-                                <li>HTML, CSS, PHP, MySQL, ASP.NET and Flutter etc.</li>
-                            </ul>
-                        </div>
-                        <div class="resume-item">
-                            <h4>Web Development and Designing Internship</h4>
-                            <h5>March, 2022 - April, 2022</h5>
-                            <p><em>Oasis Infobyte</em></p>
-                            <ul>
-                                <li>I worked as Web Development and Designing Intern in Oasis Infobyte.</li>
-                                <li>In which we have to perform various task such as we created a landing page for a
-                                    bussiness's.</li>
-                                <label for="li" class="text-black fw-bolder fs-6">Skills:</label>
-                                <li>HTML, CSS, Bootstrap Framework and Javascript, etc.</li>
-                            </ul>
-                        </div>
-                        <h3 class="resume-title">
-                            Organizations
-                        </h3>
-                        <div class="resume-item pb-0">
-                            <h4>Dev Associate in App Domain</h4>
-                            <h5>Sep, 2023 - Present</h5>
-                            <p><em>Microsoft Learn Students Club - VCET</em></p>
-                            <ul>
-                                <li>In MLSC, I worked as Dev Associate in App Domain.</li>
-                                <li>Our Team's Responsiblity is to create Cross-Platform Mobile apps using Framework
-                                    called Flutter and Dart.
-                                </li>
-                                <label for="li" class="text-black fw-bolder fs-6">Skills:</label>
-                                <li>Flutter, Dart, etc.</li>
-                            </ul>
-                        </div>
-                        <div class="resume-item pb-0">
-                            <h4>Technical Team Member</h4>
-                            <h5>Feb, 2022 - Present</h5>
-                            <p><em>Entrepreneurship Cell &dash; Vidyavardhini's College Of Engineering and Technology,
-                                    Vasai</em></p>
-                            <ul>
-                                <li>In E-Cell, I worked as Technical Team Member.</li>
-                                <li>Our Team's Responsiblity is to create various visual content (such as Poster's,
-                                    Banner's, etc.) for to awareness among people's about our upcoming event's and
-                                    program's.
-                                </li>
-                                <label for="li" class="text-black fw-bolder fs-6">Skills:</label>
-                                <li>Canva, Adobe Photoshop, Adobe Illustrator, etc.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section><!-- End Resume Section -->
-
-        <!-- ======= Portfolio Section ======= -->
-        <section id="portfolio" class="portfolio">
-            <div class="container">
-                <div class="section-title">
-                    <h2 class="pb-2 mb-3">Portfolio</h2>
-                    <p data-aos="fade-in">
-                        These are some of my project I done till date while learning different technologies such as
-                        Website Development, Cross-Platform app Development. And I'm sure more will be added day by day.
-                    </p>
-                </div>
-
-                <div class="row" data-aos="fade-up">
-                    <div class="col-lg-12 d-flex justify-content-center">
-                        <ul id="portfolio-flters">
-                            <li data-filter="*" class="filter-active">All</li>
-                            <li data-filter=".filter-app">App</li>
-                            <li data-filter=".filter-card">Card</li>
-                            <li data-filter=".filter-web">Web</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="container">
-                    <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100"
-                        style="position: relative; height: 822.75px;">
-
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                            <div class="card shadow-lg text-center">
-                                <span><i class="fa fa-eye" aria-hidden="true"></i></span>
-                                <a href="img/portfolio/portfolio-4.jpg" target="_blank" class="img-link">
-                                    <img class="card-img-top" src="img/portfolio/portfolio-4.jpg" alt="">
-                                </a>
-                                <div class="card-body">
-                                    <h5 class="card-title fw-bold">DigiFarmer - AI&ML based Farmer Assistance App</h5>
-                                    <em class="card-text">DigiFarmer is an Artificial Intelligence and Machine Learning
-                                        based project which can perform various operations/functions related to farming
-                                        prediction such as Crop Quality, Yeild Prediction, Disease Detection and Weed
-                                        Detection, etc.</em>
-                                    <br>
-                                    <br>
-                                    <a href="https://github.com/imShub/digifarmer/" target="_blank"
-                                        class="btn btn-sm bttn-check text-white">
-                                        <em>check it out!</em></small>
-                                    </a>
-                                    <a href="https://github.com/imShub/digifarmer/" target="_blank"
-                                        class="btn btn-sm btn-warning">
-                                        <em>preview</em></small>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                            <div class="card shadow-lg text-center">
-                                <span><i class="fa fa-eye" aria-hidden="true"></i></span>
-                                <a href="img/portfolio/portfolio-5.png" target="_blank" class="img-link">
-                                    <img class="card-img-top" src="img/portfolio/portfolio-5.png" alt="">
-                                </a>
-                                <div class="card-body">
-                                    <h5 class="card-title fw-bold">Azume - Entrepreneurs Community Platform App 🚀</h5>
-                                    <em class="card-text">Azume is an innovative Entrepreneurs Community Platform
-                                        designed to connect, empower, and inspire entrepreneurs worldwide. Exchange
-                                        referrals, showcase products, share knowledge, and engage with gamification to
-                                        boost your entrepreneurial journey. Join us in shaping the future of
-                                        entrepreneurship. 🚀</em>
-
-                                    <br>
-                                    <br>
-                                    <a href="https://github.com/imShub/azume/" target="_blank"
-                                        class="btn btn-sm bttn-check text-white">
-                                        <em>check it out!</em></small>
-                                    </a>
-                                    <a href="https://imShub.github.io/azume/" target="_blank"
-                                        class="btn btn-sm btn-warning">
-                                        <em>preview</em></small>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                            <div class="card shadow-lg text-center">
-                                <span><i class="fa fa-eye" aria-hidden="true"></i></span>
-                                <a href="img/portfolio/portfolio-6.png" class="img-link">
-                                    <img class="card-img-top" src="img/portfolio/portfolio-6.png" alt="">
-                                </a>
-                                <div class="card-body">
-                                    <h5 class="card-title fw-bold">ArtSathi: Your Local Art Haven 🎨</h5>
-                                    <em class="card-text">Discover and support local artisans with ArtSathi, your go-to
-                                        Online Marketplace for handmade treasures. Engage directly with artisans through
-                                        our intuitive chat functionality, ensuring a personalized touch to your artful
-                                        journey.Elevate your space with handcrafted wonders or
-                                        unleash your creativity as an artisan—ArtSathi is where the artful stories
-                                        begin. 🖌️✨</em>
-                                    <br>
-                                    <br>
-                                    <a href="https://github.com/imShub/artsathi/" target="_blank"
-                                        class="btn btn-sm bttn-check text-white">
-                                        <em>check it out!</em></small>
-                                    </a>
-                                    <a href="https://imShub.github.io/artsathi/" target="_blank"
-                                        class="btn btn-sm btn-warning">
-                                        <em>preview</em></small>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-                        <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                        <div class="portfolio-wrap">
-                            <img src="img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-links">
-                            <a href="img/portfolio/portfolio-2.jpg" data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="bx bx-plus"></i></a>
-                            <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-                        </div> -->
-                    </div>
-                    <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="100"
-                        style="position: relative; height: 822.75px;">
-
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                            <div class="card shadow-lg text-center">
-                                <span><i class="fa fa-eye" aria-hidden="true"></i></span>
-                                <a href="img/portfolio/portfolio-1.png" class="img-link">
-                                    <img class="card-img-top" src="img/portfolio/portfolio-1.jpg" alt="">
-                                </a>
-                                <div class="card-body">
-                                    <h5 class="card-title fw-bold">Gym Landing Page</h5>
-                                    <em class="card-text">This is a landing page of a Fitness Center(Gym) created using
-                                        HTML, CSS and Bootstrap Framework. </em>
-                                    <!-- <a href="https://github.com/imShub/Fitness_Center_Landing_Page/" class="d-block" target="_blank">
-                                        <small><em>check it out!</em></small>
-                                    </a> -->
-                                    <br>
-                                    <br>
-                                    <a href="https://github.com/imShub/Fitness_Center_Landing_Page/" target="_blank"
-                                        class="btn btn-sm bttn-check text-white">
-                                        <em>check it out!</em></small>
-                                    </a>
-                                    <a href="https://imShub.github.io/Fitness_Center_Landing_Page/" target="_blank"
-                                        class="btn btn-sm btn-warning">
-                                        <em>preview</em></small>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                            <div class="card shadow-lg text-center">
-                                <span><i class="fa fa-eye" aria-hidden="true"></i></span>
-                                <a href="img/portfolio/portfolio-2.jpg" class="img-link">
-                                    <img class="card-img-top" style="background-size: contain;"
-                                        src="img/portfolio/portfolio-2.png" alt="">
-                                </a>
-                                <div class="card-body">
-                                    <h5 class="card-title fw-bold">WallpaperHub App</h5>
-                                    <em class="card-text">This is a wallpapers app which is a cross-platform app created
-                                        using Flutter and Dart.</em>
-                                    <!-- <a href="https://github.com/imShub/WallpaperHub_App" class="d-block" target="_blank">
-                                        <small><em>check it out!</em></small>
-                                    </a> -->
-                                    <br>
-                                    <br>
-                                    <a href="https://github.com/imShub/WallpaperHub_App" target="_blank"
-                                        class="btn btn-sm bttn-check text-white">
-                                        <em>check it out!</em></small>
-                                    </a>
-                                    <a href="https://imshub.github.io/WallpaperHub_Web-App/" target="_blank"
-                                        class="btn btn-sm btn-warning">
-                                        <em>preview</em></small>
-                                    </a>
-                                    <a href="https://github.com/imShub/WallpaperHub_App/raw/master/apk/WallpaperHub_v2.apk"
-                                        target="_blank" class="btn btn-sm btn-outline-primary btn-small"><i
-                                            class="fas fa-download"></i></a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                            <div class="card shadow-lg text-center">
-                                <span><i class="fa fa-eye" aria-hidden="true"></i></span>
-                                <a href="img/portfolio/portfolio-3.png" class="img-link">
-                                    <img class="card-img-top" src="img/portfolio/portfolio-3.png" alt="">
-                                </a>
-                                <div class="card-body">
-                                    <h5 class="card-title fw-bold">Basic Portfolio</h5>
-                                    <em class="card-text">This is a basic personal portfolio website created using HTML,
-                                        CSS and Bootstrap framework.</em>
-                                    <br>
-                                    <a href="https://imshub.github.io/oibsip_2/" target="_blank"
-                                        class="btn btn-sm bttn-check text-white mt-4 ">
-                                        <em>check it out!</em></small>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-                        <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                        <div class="portfolio-wrap">
-                            <img src="img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-links">
-                            <a href="img/portfolio/portfolio-2.jpg" data-gall="portfolioGallery" class="venobox" title="Web 3"><i class="bx bx-plus"></i></a>
-                            <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                            </div>
-                        </div>
-                        </div> -->
+            <!-- Job 2 -->
+            <div class="timeline-item reveal-up delay-1">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">Jun 2024 – Feb 2025</span>
+                    <h3>Flutter & Web Backend Developer Intern</h3>
+                    <h4>Ace 360 Degree</h4>
+                    <p>Played a dual role involving re-developing client-facing Flutter applications while
+                        simultaneously adding core functionalities to CRM modules (like email/SMS notifications)
+                        utilizing PHP (CodeIgniter) and MySQL.</p>
+                    <div class="tags" style="margin-top: 15px; margin-bottom: 0;">
+                        <span>Flutter</span><span>CodeIgniter</span><span>PHP</span><span>MySQL</span>
                     </div>
                 </div>
             </div>
-        </section><!-- End Portfolio Section -->
 
-
-        <!-- ======= Services Section ======= -->
-        <section id="services" class="services section-bg">
-            <div class="container">
-
-                <div class="section-title">
-                    <h2 class="pb-2 mb-2">Services</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit
-                        sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias
-                        ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+            <!-- Job 3 -->
+            <div class="timeline-item reveal-up delay-2">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <span class="timeline-date">Dec 2023 – Jan 2024</span>
+                    <h3>IT Intern - RPA Team</h3>
+                    <h4>ICICI Prudential Life Insurance</h4>
+                    <p>Acquired hands-on experience with RPA technologies and the Control-M Application, developing
+                        tracking scripts and insightful software utilization reports.</p>
                 </div>
-
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
-                        <div class="card text-left">
-                            <div class="card-body">
-                                <p class="card-text">
-                                <div class="icon"><i class="icofont-computer"></i></div>
-                                <h4 class="title"><a href="">Front-End Web design's</a></h4>
-                                <p class="description">I can create awesome frontend design's using HTML,CSS and
-                                    Bootstrap Framework.</p>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
-                        <div class="card text-left">
-                            <div class="card-body">
-                                <p class="card-text">
-                                <div class="icon"><i class="icofont-chart-bar-graph"></i></div>
-                                <h4 class="title"><a href="">UI Designs</a></h4>
-                                <p class="description">I can create beutiful UI design's for you.</p>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
-                        <div class="card text-left">
-                            <div class="card-body">
-                                <p class="card-text">
-                                <div class="icon"><i class="icofont-earth"></i></div>
-                                <h4 class="title"><a href="">Responsive Web Design's</a></h4>
-                                <p class="description"></p>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
-                        <div class="card text-left">
-                            <div class="card-body">
-                                <p class="card-text">
-                                <div class="icon"><i class="icofont-image"></i></div>
-                                <h4 class="title"><a href="">Magni Dolores</a></h4>
-                                <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                                    officia deserunt mollit anim id est laborum</p>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
-                        <div class="card text-left">
-                            <div class="card-body">
-                                <p class="card-text">
-                                <div class="icon"><i class="icofont-settings"></i></div>
-                                <h4 class="title"><a href="">Nemo Enim</a></h4>
-                                <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                                    blanditiis praesentium voluptatum deleniti atque</p>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
-                        <div class="card text-left">
-                            <div class="card-body">
-                                <p class="card-text">
-                                <div class="icon"><i class="icofont-tasks-alt"></i></div>
-                                <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
-                                <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam
-                                    libero tempore, cum soluta nobis est eligendi</p>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section><!-- End Services Section -->
-
-
-        <!-- ======= Contact Section ======= -->
-        <section id="contact" class="contact" style="padding-top: 30px;">
-            <div class="container">
-
-                <div class="section-title">
-                    <h2 class="pb-3">Contact</h2>
-                </div>
-
-                <div class="row container" data-aos="fade-up">
-
-                    <div class="col-lg-5 d-flex align-items-stretch">
-                        <div class="info">
-                            <div class="address">
-                                <i class="icofont-google-map"></i>
-                                <h4>Location:</h4>
-                                <p>Kurar Village, Malad East, Mumbai, Maharashtra</p>
-                            </div>
-
-                            <div class="email">
-                                <i class="icofont-envelope"></i>
-                                <h4>Email:</h4>
-                                <p>waghmareshubham132@gmail.com</p>
-                            </div>
-
-                            <div class="phone">
-                                <i class="icofont-phone"></i>
-                                <h4>Call:</h4>
-                                <p>+91 77109 81416</p>
-                            </div>
-
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15072.730876241289!2d72.85427076959773!3d19.187220108193515!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b71088ff7c6d%3A0x42f4f88993c66e0d!2sKurar%20Village%2C%20Malad%20East%2C%20Mumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1658487316625!5m2!1sen!2sin"
-                                frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen
-                                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-
-                    </div>
-
-                    <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-                        <form action="./forms/contact.php" method="post" role="form" class="php-email-form">
-                            <div class="row form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="name">Your Name</label>
-                                    <input type="text" name="name" class="form-control" id="name" data-rule="minlen:4"
-                                        data-msg="Please enter at least 4 chars" />
-                                    <div class="validate"></div>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label for="name">Your Email</label>
-                                    <input type="email" class="form-control" name="email" id="email" data-rule="email"
-                                        data-msg="Please enter a valid email" />
-                                    <div class="validate"></div>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="name">Subject</label>
-                                <input type="text" class="form-control" name="subject" id="subject" data-rule="minlen:4"
-                                    data-msg="Please enter at least 8 chars of subject" />
-                                <div class="validate"></div>
-                            </div>
-                            <div class="form-group">
-                                <label for="name">Message</label>
-                                <textarea class="form-control" name="message" rows="10" data-rule="required"
-                                    data-msg="Please write something for us"></textarea>
-                                <div class="validate"></div>
-                            </div>
-                            <div class="mb-3">
-                                <div class="loading">Loading</div>
-                                <div class="error-message"></div>
-                                <div class="sent-message">Your message has been sent. Thank you!</div>
-                            </div>
-                            <div class="text-center"><button type="submit">Send Message</button></div>
-                        </form>
-                    </div>
-
-                </div>
-                <!-- Badge Code - Do Not Change The Code -->
-                <div class="d-flex align-items-center justify-content-center text-center" style="margin-top: 50px;">
-                    <h3>My Portfolio Views : <a href=''></a>
-                        <script type='text/javascript'
-                            src='https://www.freevisitorcounters.com/auth.php?id=ff12e397f9e907eea43e03ce01cd447c775e44bb'></script>
-                        <script type="text/javascript"
-                            src="https://www.freevisitorcounters.com/en/home/counter/1119908/t/13"></script>
-                </div>
-                <!-- Badge Code End Here -->
-
-            </div>
-        </section><!-- End Contact Section -->
-
-
-    </main><!-- End #main -->
-
-    <!-- ======= Footer ======= -->
-    <footer id="footer">
-        <div class="container">
-            <div class="copyright">
-                &copy; Copyright <strong><span>Shubham Waghmare</span></strong>
-            </div>
-            <div class="credits">
-                Designed by <a href="#">Me</a>
             </div>
         </div>
-    </footer><!-- End  Footer -->
+    </section>
 
-    <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+    <!-- Narrative Section: Contact (Messaging OS) -->
+    <section class="container" id="contact" style="padding-bottom: 4rem;">
+        <div class="section-header reveal-up text-center" style="text-align: center;">
+            <h2 class="section-title">Communicate</h2>
+            <p class="section-desc mx-auto" style="margin: 0 auto;">Connect securely through my mobile interface.</p>
+        </div>
 
+        <div class="imessage-container tilt-effect reveal-up" style="transform-style: preserve-3d;">
+            <div class="shine"></div>
+            <!-- Top App Bar -->
+            <div class="imessage-header">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <i class="fa-solid fa-chevron-left" style="color: var(--accent-cyan); cursor: pointer;"
+                        onclick="document.getElementById('contact').scrollIntoView();"></i>
+                    <img src="img/Shubham_hero_img.jpg" alt="Shubham UI"
+                        onerror="this.src='https://placehold.co/40x40?text=S'">
+                    <div style="display: flex; flex-direction: column;">
+                        <span style="font-size: 1.1rem; font-weight: 500;">Shubham Waghmare</span>
+                        <span style="font-size: 0.75rem; color: #3DDC84;"><i class="fa-solid fa-circle"
+                                style="font-size: 0.5rem; margin-right: 4px;"></i>Online | Available</span>
+                    </div>
+                </div>
+                <div><i class="fa-solid fa-video" style="color: var(--accent-cyan); margin-right: 15px;"></i> <i
+                        class="fa-solid fa-circle-info" style="color: var(--accent-cyan);"></i></div>
+            </div>
 
+            <!-- Chat Area -->
+            <div class="imessage-chat">
+                <div class="msg received">
+                    Looking for a Flutter developer? You've come to the right place. 🚀
+                </div>
+                <div class="msg received">
+                    I'm actively looking for new opportunities and collaborations. You can reach me via email at
+                    <strong>waghmareshubham132@gmail.com</strong> or call me at <strong>(+91) 77109 81416</strong>.
+                </div>
 
-    <!-- JS -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.js"></script>
-    <script src="assets/jquery/jquery.min.js"></script>
-    <script src="assets/jquery/jquery.min.map"></script>
-    <script src="assets/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/jquery.easing/jquery.easing.min.js"></script>
-    <script src="assets/typed.js/typed.min.js"></script>
-    <script src="assets/php-email-form/validate.js"></script>
-    <script src="assets/aos/aos.js"></script>
-    <script src="assets/venobox/venobox.min.js"></script>
-    <script>
-        AOS.init();
+                <div class="social-message received">
+                    <p style="margin-bottom: 10px; font-size: 0.9rem;">Or connect on my socials:</p>
+                    <div class="social-links" style="margin-bottom: 0; gap: 10px;">
+                        <a href="https://linkedin.com/in/imshub" target="_blank" class="hover-target"
+                            style="width: 40px; height: 40px;"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://github.com/imShub" target="_blank" class="hover-target"
+                            style="width: 40px; height: 40px;"><i class="fa-brands fa-github"></i></a>
+                    </div>
+                </div>
 
-    </script>
-    <script>
-        // $(document).ready(function () {
+                <div class="msg sent" style="opacity: 0.7;">
+                    Typing a new message...
+                </div>
+            </div>
 
-        //     $('nav > li')
-        //         .click(function (e) {
-        //             $('nav > li')
-        //                 .removeClass('active');
-        //             $(this).addClass('active');
-        //         });
-        // });
-    </script>
+            <!-- Keyboard Input Area -->
+            <div class="imessage-input">
+                <form action="#" method="POST" style="display: flex; width: 100%; gap: 10px; align-items: center;">
+                    <i class="fa-solid fa-plus"
+                        style="color: var(--text-secondary); cursor: pointer; font-size: 1.2rem;"></i>
+                    <input type="text" placeholder="iMessage / Send me a quick text" required
+                        class="imessage-textfield hover-target">
+                    <button type="submit" class="imessage-send hover-target"><i
+                            class="fa-solid fa-arrow-up"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
 
+    <!-- Footer -->
+    <footer class="premium-footer" style="padding: 2rem 5%;">
+        <p style="color: var(--text-secondary); font-size: 0.9rem;">&copy; 2026 Shubham Waghmare. Crafted with passion
+            <i class="fa-solid fa-heart" style="color: var(--accent-cyan); font-size: 0.8rem;"></i>.
+        </p>
+    </footer>
 
-    ///Side bar 
-    <script>
-    // Add smooth scrolling on all links inside the sidebar
-    $(".nav-menu ul li a").on('click', function(event) {
-        // Make sure this.hash has a value before overriding default behavior
-        if (this.hash !== "") {
-            // Prevent default anchor click behavior
-            event.preventDefault();
-
-            // Store hash
-            var hash = this.hash;
-
-            // Using jQuery's animate() method to add smooth page scroll
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 800, function() {
-                // Add hash (#) to URL when done scrolling (default click behavior)
-                window.location.hash = hash;
-            });
-
-            // Add active class to the clicked menu item
-            $('.nav-menu ul li').removeClass('active');
-            $(this).parent().addClass('active');
-        }
-    });
-
-    // Highlight the active section in the sidebar while scrolling
-    $(window).on('scroll', function() {
-        var scrollDistance = $(window).scrollTop();
-
-        // Highlight the active section in the nav
-        $('.section').each(function(i) {
-            if ($(this).position().top <= scrollDistance + 100 && $(this).position().top + $(this).height() > scrollDistance) {
-                $('.nav-menu ul li').removeClass('active');
-                $('.nav-menu ul li a[href="#' + $(this).attr('id') + '"]').parent().addClass('active');
-            }
-        });
-    }).scroll();
-
-    </script>
-
-
-    <!-- Template Main JS File -->
-    <script src="js/main.js"></script>
+    <!-- Scripting -->
+    <script src="js/app.js"></script>
 </body>
 
 </html>
