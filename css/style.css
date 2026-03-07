@@ -2038,20 +2038,54 @@ section:not(#hero)::after {
 
 .floating-prompts {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 5px;
+  flex-wrap: nowrap;
+  gap: 10px;
+  margin: 0;
+  padding: 12px 20px;
+  overflow-x: auto;
+  border-top: 1px solid var(--border-color);
+  background: rgba(0, 0, 0, 0.4);
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE/Edge */
+  will-change: transform;
+}
+
+.floating-prompts::-webkit-scrollbar {
+  display: none;
+  /* Chrome/Safari/Opera */
 }
 
 .floating-prompts .chat-prompt-chip {
-  padding: 5px 12px;
-  font-size: 0.8rem;
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.floating-prompts .chat-prompt-chip:hover {
+  background: rgba(66, 165, 245, 0.15);
+  border-color: var(--accent-cyan);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(66, 165, 245, 0.2);
+}
+
+.floating-prompts .chat-prompt-chip:active {
+  transform: translateY(0) scale(0.95);
 }
 
 .chatbot-input-area {
-  padding: 15px;
+  padding: 15px 20px;
   background: rgba(255, 255, 255, 0.03);
-  border-top: 1px solid var(--border-color);
+  /* Border top removed since the prompts div now provides the separator */
 }
 
 .chatbot-input-area form {
