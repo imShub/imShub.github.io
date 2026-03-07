@@ -38,10 +38,6 @@
         <div class="loader-content">
             <div class="loader-text">Shubham</div>
             <div class="loader-flutter-icon"><i class="devicon-flutter-plain"></i></div>
-            <!-- Elegant Sparkles -->
-            <i class="fa-solid fa-sparkles loader-sparkle s1"></i>
-            <i class="fa-solid fa-star loader-sparkle s2"></i>
-            <i class="fa-solid fa-star loader-sparkle s3"></i>
         </div>
     </div>
 
@@ -512,62 +508,85 @@
             </div>
 
 
-            <!-- Secondary Showcase -->
-            <div class="sub-projects-grid">
-                <!-- ARHomes -->
-                <div class="banner-project tilt-effect reveal-up theme-azume"
-                    style="display: flex; flex-direction: column; height: 100%; transform-style: preserve-3d; border-radius: 24px; padding: 2rem;">
-                    <div class="project-number" style="font-size: 5rem; top: -30px; left: 10px;">04</div>
-                    <div class="shine"></div>
-                    <div class="project-banner">
-                        <img src="img/portfolio/portfolio-2.png" alt="ARHomes">
+            <!-- Secondary Showcase Continuous Carousel -->
+            <div class="horizontal-carousel-wrapper">
+                <div class="horizontal-carousel-track">
+                    <!-- Original 3 items -->
+                    <div class="horizontal-card" onclick="window.open('https://github.com/imShub/', '_blank')">
+                        <div class="card-img-box">
+                            <img src="img/portfolio/portfolio-2.png" alt="ARHomes">
+                        </div>
+                        <div class="card-info">
+                            <div class="bg-number">04</div>
+                            <div class="tags"><span>AR</span><span>Firebase</span></div>
+                            <h3 class="outfit-font">ARHomes Vision</h3>
+                            <p>Revolutionizing interior design. Try furniture in your own space using augmented reality.
+                            </p>
+                        </div>
                     </div>
 
-                    <div class="project-info"
-                        style="padding: 1.5rem 0 0; flex: 1; transform: translateZ(40px); background: transparent;">
-                        <div class="tags"><span>AR</span><span>Firebase</span></div>
-                        <h3 class="outfit-font" style="font-size: 1.6rem;"><span class="text-gradient">ARHomes</span>
-                            Vision</h3>
-                        <p style="font-size: 0.95rem;">Revolutionizing interior design. Try furniture in your own space
-                            using augmented reality.</p>
-                    </div>
-                </div>
-
-                <!-- Wallpaper Hub -->
-                <div class="banner-project tilt-effect reveal-up delay-1 theme-artsathi"
-                    style="display: flex; flex-direction: column; height: 100%; transform-style: preserve-3d; border-radius: 24px; padding: 2rem;">
-                    <div class="project-number" style="font-size: 5rem; top: -30px; left: 10px;">05</div>
-                    <div class="shine"></div>
-                    <div class="project-banner">
-                        <img src="img/portfolio/portfolio-3.png" alt="Wallpaper Hub">
+                    <div class="horizontal-card" onclick="window.open('https://github.com/imShub/', '_blank')">
+                        <div class="card-img-box">
+                            <img src="img/portfolio/portfolio-3.png" alt="Wallpaper Hub">
+                        </div>
+                        <div class="card-info">
+                            <div class="bg-number">05</div>
+                            <div class="tags"><span>Flutter</span><span>REST API</span></div>
+                            <h3 class="outfit-font">Wallpapers Hub</h3>
+                            <p>A massive aesthetic community gallery. High-res visuals curated for the ultimate mobile
+                                experience.</p>
+                        </div>
                     </div>
 
-                    <div class="project-info"
-                        style="padding: 1.5rem 0 0; flex: 1; transform: translateZ(40px); background: transparent;">
-                        <div class="tags"><span>Flutter</span><span>REST API</span></div>
-                        <h3 class="outfit-font" style="font-size: 1.6rem;"><span class="text-gradient">Wallpapers</span>
-                            Hub</h3>
-                        <p style="font-size: 0.95rem;">A massive aesthetic community gallery. High-res visuals curated
-                            for the ultimate mobile experience.</p>
-                    </div>
-                </div>
-
-                <!-- Fitness Arena -->
-                <div class="banner-project tilt-effect reveal-up theme-farmer"
-                    style="display: flex; flex-direction: column; height: 100%; transform-style: preserve-3d; border-radius: 24px; padding: 2rem;">
-                    <div class="project-number" style="font-size: 5rem; top: -30px; left: 10px;">06</div>
-                    <div class="shine"></div>
-                    <div class="project-banner">
-                        <img src="img/portfolio/portfolio-1.jpg" alt="Fitness Arena">
+                    <div class="horizontal-card" onclick="window.open('https://github.com/imShub/', '_blank')">
+                        <div class="card-img-box">
+                            <img src="img/portfolio/portfolio-1.jpg" alt="Fitness Arena">
+                        </div>
+                        <div class="card-info">
+                            <div class="bg-number">06</div>
+                            <div class="tags"><span>HTML</span><span>Bootstrap</span></div>
+                            <h3 class="outfit-font">Fitness Arena</h3>
+                            <p>High-performance, responsive landing page for modern fitness centers.</p>
+                        </div>
                     </div>
 
-                    <div class="project-info"
-                        style="padding: 1.5rem 0 0; flex: 1; transform: translateZ(40px); background: transparent;">
-                        <div class="tags"><span>HTML</span><span>Bootstrap</span></div>
-                        <h3 class="outfit-font" style="font-size: 1.6rem;"><span class="text-gradient">Fitness</span>
-                            Arena</h3>
-                        <p style="font-size: 0.95rem;">High-performance, responsive landing page for modern fitness
-                            centers.</p>
+                    <!-- Duplicated 3 items for infinite scroll -->
+                    <div class="horizontal-card" onclick="window.open('https://github.com/imShub/', '_blank')">
+                        <div class="card-img-box">
+                            <img src="img/portfolio/portfolio-2.png" alt="ARHomes">
+                        </div>
+                        <div class="card-info">
+                            <div class="bg-number">04</div>
+                            <div class="tags"><span>AR</span><span>Firebase</span></div>
+                            <h3 class="outfit-font">ARHomes Vision</h3>
+                            <p>Revolutionizing interior design. Try furniture in your own space using augmented reality.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="horizontal-card" onclick="window.open('https://github.com/imShub/', '_blank')">
+                        <div class="card-img-box">
+                            <img src="img/portfolio/portfolio-3.png" alt="Wallpaper Hub">
+                        </div>
+                        <div class="card-info">
+                            <div class="bg-number">05</div>
+                            <div class="tags"><span>Flutter</span><span>REST API</span></div>
+                            <h3 class="outfit-font">Wallpapers Hub</h3>
+                            <p>A massive aesthetic community gallery. High-res visuals curated for the ultimate mobile
+                                experience.</p>
+                        </div>
+                    </div>
+
+                    <div class="horizontal-card" onclick="window.open('https://github.com/imShub/', '_blank')">
+                        <div class="card-img-box">
+                            <img src="img/portfolio/portfolio-1.jpg" alt="Fitness Arena">
+                        </div>
+                        <div class="card-info">
+                            <div class="bg-number">06</div>
+                            <div class="tags"><span>HTML</span><span>Bootstrap</span></div>
+                            <h3 class="outfit-font">Fitness Arena</h3>
+                            <p>High-performance, responsive landing page for modern fitness centers.</p>
+                        </div>
                     </div>
                 </div>
             </div>

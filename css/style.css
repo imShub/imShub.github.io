@@ -387,8 +387,8 @@ ul {
 #cursor.hover-active {
   width: 60px;
   height: 60px;
-  background: var(--accent-cyan);
-  opacity: 0.5;
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+  opacity: 0.6;
 }
 
 #cursor-follower {
@@ -475,6 +475,11 @@ ul {
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: -1px;
+  transition: text-shadow 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.logo:hover {
+  text-shadow: 0 0 15px rgba(66, 165, 245, 0.6);
 }
 
 .logo span {
@@ -490,11 +495,29 @@ ul {
   font-size: 0.95rem;
   font-weight: 500;
   color: var(--text-secondary);
-  transition: color 0.3s;
+  transition: color 0.3s, text-shadow 0.3s;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-cyan), var(--accent-purple));
+  transition: width 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  border-radius: 2px;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
 }
 
 .nav-links a:hover {
-  color: var(--text-primary);
+  color: #fff;
+  text-shadow: 0 0 10px rgba(66, 165, 245, 0.5);
 }
 
 .btn-primary,
@@ -519,7 +542,9 @@ ul {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.15);
+  background: linear-gradient(135deg, var(--accent-cyan), var(--accent-purple));
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(66, 165, 245, 0.4);
 }
 
 .btn-secondary {
@@ -529,17 +554,27 @@ ul {
 }
 
 .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
+  color: #fff;
+  border-color: transparent;
   transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(138, 43, 226, 0.4);
 }
 
 .mobile-menu-btn {
   display: none;
   background: none;
   border: none;
-  color: #fff;
+  color: var(--text-secondary);
   font-size: 1.5rem;
   cursor: pointer;
+  transition: color 0.3s, transform 0.3s, filter 0.3s;
+}
+
+.mobile-menu-btn:hover {
+  color: var(--accent-cyan);
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 8px var(--accent-cyan));
 }
 
 @media (max-width: 992px) {
@@ -1563,11 +1598,183 @@ section:not(#hero)::after {
   line-height: 1.7;
 }
 
-.sub-projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 3rem;
-  margin-top: 4rem;
+/* --------------- SECONDARY SHOWCASE (HORIZONTAL INFINITE CAROUSEL) --------------- */
+.horizontal-carousel-wrapper {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  position: relative;
+  overflow: hidden;
+  padding: 3rem 0;
+  margin-top: 5rem;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, transparent 15%, transparent 85%, rgba(0, 0, 0, 0.8) 100%);
+  /* The gradient masks the edges seamlessly */
+}
+
+.horizontal-carousel-track {
+  display: flex;
+  gap: 2.5rem;
+  width: max-content;
+  /* Critical for continuous scroll */
+  animation: scrollHorizontalCarousel 35s linear infinite;
+  will-change: transform;
+}
+
+.horizontal-carousel-track:hover {
+  animation-play-state: paused;
+}
+
+.horizontal-card {
+  width: 600px;
+  height: 280px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  flex-shrink: 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  z-index: 1;
+  /* Keep above gradient */
+}
+
+.horizontal-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(66, 165, 245, 0.15);
+  border-color: rgba(66, 165, 245, 0.4);
+}
+
+.card-img-box {
+  width: 45%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.horizontal-card:hover .card-img-box img {
+  transform: scale(1.08);
+  /* Zoom on hover */
+}
+
+.card-info {
+  width: 55%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  background: var(--bg-surface);
+}
+
+.card-info .bg-number {
+  position: absolute;
+  top: -15px;
+  right: 15px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 5rem;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.03);
+  z-index: 0;
+  /* Behind the text */
+  pointer-events: none;
+  line-height: 1;
+}
+
+.card-info .tags {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 0.5rem;
+}
+
+.card-info h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  position: relative;
+  z-index: 2;
+  color: #fff;
+}
+
+.card-info p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes scrollHorizontalCarousel {
+  0% {
+    transform: translateX(0);
+  }
+
+  /* Since there are 6 items (3 duplicated), scroll by half the total track width precisely. 
+     (3 items * 600px) + (3 gaps * 2.5rem = 3 * 40px = 120px) = 1920px. 
+     Using percentage is safer if flex is perfectly symmetric. */
+  100% {
+    transform: translateX(calc(-50% - 1.25rem));
+  }
+}
+
+@media (max-width: 992px) {
+  .horizontal-card {
+    width: 480px;
+    height: 240px;
+  }
+
+  .card-info {
+    padding: 1.5rem;
+  }
+
+  .card-info .bg-number {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .horizontal-carousel-wrapper {
+    /* Less intense fade mask on mobile */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, transparent 10%, transparent 90%, rgba(0, 0, 0, 0.8) 100%);
+  }
+
+  .horizontal-card {
+    width: 280px;
+    height: 380px;
+    flex-direction: column;
+  }
+
+  .card-img-box {
+    width: 100%;
+    height: 45%;
+  }
+
+  .card-info {
+    width: 100%;
+    height: 55%;
+    padding: 1.5rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .card-info .bg-number {
+    top: 10px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .card-info .tags {
+    justify-content: center;
+  }
 }
 
 
