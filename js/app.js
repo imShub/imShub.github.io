@@ -196,6 +196,24 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 100);
         };
 
+        // Reset function for manual/auto relocking
+        window.relockPhone = () => {
+            phoneHomeScreen.style.opacity = '0';
+            phoneHomeScreen.style.transform = 'scale(0.95)';
+            phoneHomeScreen.style.pointerEvents = 'none';
+            phoneLockScreen.style.transform = 'translateY(0)';
+            phoneLockScreen.style.pointerEvents = 'all';
+            phoneLockScreen.style.cursor = 'pointer';
+
+            // Reset Fingerprint Visuals
+            if (fingerprintScanner) {
+                fingerprintScanner.style.transform = '';
+                fingerprintScanner.style.background = '';
+                fingerprintScanner.style.borderColor = '';
+                fingerprintScanner.style.boxShadow = '';
+            }
+        };
+
         // Aggressive click/touch capturing
         phoneLockScreen.addEventListener('click', unlockPhone);
         phoneLockScreen.addEventListener('touchstart', unlockPhone, { passive: false });
