@@ -769,16 +769,22 @@
                     </div>
 
                     <!-- Chat Prompts -->
-                    <div class="chat-prompts"
-                        style="display: flex; gap: 8px; padding: 10px 15px; overflow-x: auto; background: rgba(255,255,255,0.02); border-top: 1px solid var(--border-color); scrollbar-width: none;">
+                    <div class="chat-prompts">
                         <span class="chat-prompt-chip"
-                            style="white-space: nowrap; padding: 6px 12px; border-radius: 20px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); font-size: 0.8rem; cursor: pointer; color: var(--text-primary); transition: 0.3s;"
-                            onclick="document.querySelector('.imessage-textfield').value = 'Say Hi!'; document.querySelector('.imessage-input form').dispatchEvent(new Event('submit', {cancelable: true, bubbles: true}));">👋
+                            onclick="document.querySelector('.imessage-textfield').value = 'Hi there! 👋'; document.querySelector('.imessage-input form').dispatchEvent(new Event('submit', {cancelable: true, bubbles: true}));">👋
                             Hi!</span>
                         <span class="chat-prompt-chip"
-                            style="white-space: nowrap; padding: 6px 12px; border-radius: 20px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); font-size: 0.8rem; cursor: pointer; color: var(--text-primary); transition: 0.3s;"
-                            onclick="document.querySelector('.imessage-textfield').value = 'Seeking Job?'; document.querySelector('.imessage-input form').dispatchEvent(new Event('submit', {cancelable: true, bubbles: true}));">💼
-                            Job?</span>
+                            onclick="document.querySelector('.imessage-textfield').value = 'What are your top skills?'; document.querySelector('.imessage-input form').dispatchEvent(new Event('submit', {cancelable: true, bubbles: true}));">🚀
+                            Top Skills</span>
+                        <span class="chat-prompt-chip"
+                            onclick="document.querySelector('.imessage-textfield').value = 'Tell me about your tech stack.'; document.querySelector('.imessage-input form').dispatchEvent(new Event('submit', {cancelable: true, bubbles: true}));">🔋
+                            Tech Stack</span>
+                        <span class="chat-prompt-chip"
+                            onclick="document.querySelector('.imessage-textfield').value = 'Are you looking for work?'; document.querySelector('.imessage-input form').dispatchEvent(new Event('submit', {cancelable: true, bubbles: true}));">💼
+                            Hiring?</span>
+                        <span class="chat-prompt-chip"
+                            onclick="document.querySelector('.imessage-textfield').value = 'Roast me! 🔥'; document.querySelector('.imessage-input form').dispatchEvent(new Event('submit', {cancelable: true, bubbles: true}));">🔥
+                            Roast</span>
                     </div>
 
                     <!-- Keyboard Input Area -->
@@ -786,8 +792,10 @@
                         <form action="#" method="POST"
                             style="display: flex; width: 100%; gap: 10px; align-items: center;">
                             <input type="text" placeholder="iMessage" required class="imessage-textfield hover-target">
-                            <button type="submit" class="imessage-send hover-target"><i
-                                    class="fa-solid fa-arrow-up"></i></button>
+                            <button type="submit" class="hover-target"
+                                style="background: none; border: none; padding: 0;"><i
+                                    class="fa-solid fa-circle-arrow-up"
+                                    style="color: var(--accent-cyan); font-size: 1.8rem;"></i></button>
                         </form>
                     </div>
                 </div>
@@ -901,12 +909,13 @@
             </div>
 
             <div class="chat-prompts floating-prompts">
-                <span class="chat-prompt-chip" data-msg="What are his top skills?">🚀 Top Skills</span>
-                <span class="chat-prompt-chip" data-msg="Tell me about his experience.">💻 Experience</span>
-                <span class="chat-prompt-chip" data-msg="What is his tech stack?">🔋 Tech Stack</span>
-                <span class="chat-prompt-chip" data-msg="Where did he study?">🎓 Education</span>
-                <span class="chat-prompt-chip" data-msg="Is he looking for a job?">💼 Hiring</span>
-                <span class="chat-prompt-chip" data-msg="Roast me!">🔥 Roast</span>
+                <span class="chat-prompt-chip" data-msg="Say Hi! 👋">👋 Hi!</span>
+                <span class="chat-prompt-chip" data-msg="What are your top skills?">🚀 Top Skills</span>
+                <span class="chat-prompt-chip" data-msg="Tell me about your experience.">💻 Experience</span>
+                <span class="chat-prompt-chip" data-msg="What is your tech stack?">🔋 Tech Stack</span>
+                <span class="chat-prompt-chip" data-msg="Where did you study?">🎓 Education</span>
+                <span class="chat-prompt-chip" data-msg="Are you looking for a job?">💼 Hiring?</span>
+                <span class="chat-prompt-chip" data-msg="Roast me! 🔥">🔥 Roast</span>
             </div>
 
             <div class="chatbot-input-area">

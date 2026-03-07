@@ -341,11 +341,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Re-append typing indicator & show it for bot "typing"
             if (typingIndicator) {
+                typingIndicator.classList.add('typing');
                 typingIndicator.textContent = "Shubham is typing...";
                 typingIndicator.style.display = 'block';
-                typingIndicator.style.alignSelf = 'flex-start'; // Move to left side
-                typingIndicator.style.background = 'transparent'; // No blue background
-                typingIndicator.style.color = '#fff';
+                typingIndicator.style.alignSelf = 'flex-start';
                 chatArea.appendChild(typingIndicator);
             }
 
@@ -364,19 +363,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (lowerText.includes('hi') || lowerText.includes('hello') || lowerText.includes('hey')) {
                     reply = "Yooo! What's good? I'm Shubham's automated clone. He's probably busy writing some clean Flutter code rn. What can I help you with?";
                 } else if (lowerText.includes('job') || lowerText.includes('hiring') || lowerText.includes('work') || lowerText.includes('opportunity')) {
-                    reply = "Oh yeah, the main man is ALWAYS open to epic opportunities! Especially if it involves Flutter or building cool mobile apps. You hiring? 👀";
+                    reply = "The main man is ALWAYS open to epic opportunities! Especially if it involves Flutter, Dart, or building high-performance mobile apps. You hiring? 👀";
                 } else if (lowerText.includes('where') || lowerText.includes('live') || lowerText.includes('location')) {
-                    reply = "He's based out of Mumbai, mostly vibing in a dark room illuminated only by his IDE theme. Typical developer habitat! 🦇💻";
+                    reply = "He's based out of Mumbai, mostly vibing in a dark room illuminated only by his IDE glow. Typical developer habitat! 🦇💻";
                 } else if (lowerText.includes('roast') || lowerText.includes('joke')) {
-                    reply = "I'd roast you, but my creator told me to be professional... Just kidding, your last app crashed on launch didn't it? (Sorry, it's just a joke! 😂)";
+                    reply = "I'd roast you, but my creator told me to be professional... Just kidding, your last app crashed on launch didn't it? (Sorry, just a joke! 😂)";
                 } else if (lowerText.includes('flutter')) {
                     reply = "Ah, Flutter. The supreme UI toolkit! Shubham breathes Widgets and StateManagement! 💙";
                 } else if (lowerText.includes('skill') || lowerText.includes('stack')) {
                     reply = "He's a wizard with <b>Flutter, Dart, Firebase, and UI/UX Architecture</b>. Basically, if it runs on a screen, he can build it perfectly! 🔥";
                 } else if (lowerText.includes('experience') || lowerText.includes('work')) {
-                    reply = "Right now he's rocking it as a Junior Flutter Developer at Summit Technology. Previously, he built 'Azume' and 'DigiFarmer' which actually won State Level awards! 🏆";
+                    reply = "He's currently a <b>Junior Flutter Developer</b> at Intellect Software Solutions. He's worked on big projects like Axis Direct Trader! 🏆";
                 } else if (lowerText.includes('education') || lowerText.includes('study') || lowerText.includes('college')) {
-                    reply = "He holds a degree in <b>Artificial Intelligence & Data Science</b> from Vidyavardhini's College of Engineering (2021-2025). Smart guy! 🧠";
+                    reply = "He holds a degree in <b>Artificial Intelligence & Data Science</b> from Vidyavardhini's College of Engineering (2021-2025). 🧠";
                 }
 
                 responseMsg.innerHTML = reply;
@@ -384,10 +383,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Hide typing indicator before showing response
                 if (typingIndicator) {
                     typingIndicator.style.display = 'none';
+                    typingIndicator.classList.remove('typing');
                     // Reset styling back to user typing style for later
                     typingIndicator.textContent = "Typing a new message...";
                     typingIndicator.style.alignSelf = 'flex-end';
-                    typingIndicator.style.background = '#02569B';
                 }
 
                 chatArea.appendChild(responseMsg);
@@ -473,19 +472,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (lowerText.includes('hi') || lowerText.includes('hello') || lowerText.includes('hey')) {
                     reply = "Yooo! What's good? I'm Shubham's automated clone. He's probably busy writing some clean Flutter code rn. What can I help you with?";
                 } else if (lowerText.includes('job') || lowerText.includes('hiring') || lowerText.includes('work') || lowerText.includes('opportunity')) {
-                    reply = "Oh yeah, the main man is ALWAYS open to epic opportunities! Especially if it involves Flutter or building cool mobile apps. You hiring? 👀";
+                    reply = "The main man is ALWAYS open to epic opportunities! Especially if it involves Flutter, Dart, or building high-performance mobile apps. You hiring? 👀";
                 } else if (lowerText.includes('where') || lowerText.includes('live') || lowerText.includes('location')) {
-                    reply = "He's based out of Mumbai, mostly vibing in a dark room illuminated only by his IDE theme. Typical developer habitat! 🦇💻";
+                    reply = "He's based out of Mumbai, mostly vibing in a dark room illuminated only by his IDE glow. Typical developer habitat! Bat; Laptop; 🦇💻";
                 } else if (lowerText.includes('roast') || lowerText.includes('joke')) {
-                    reply = "I'd roast you, but my creator told me to be professional... Just kidding, your last app crashed on launch didn't it? (Sorry, it's just a joke! 😂)";
+                    reply = "I'd roast you, but my creator told me to be professional... Just kidding, your last app crashed on launch didn't it? (Sorry, just a joke! 😂)";
                 } else if (lowerText.includes('flutter')) {
                     reply = "Ah, Flutter. The supreme UI toolkit! Shubham breathes Widgets and StateManagement! 💙";
                 } else if (lowerText.includes('skill') || lowerText.includes('stack')) {
                     reply = "He's a wizard with <b>Flutter, Dart, Firebase, and UI/UX Architecture</b>. Basically, if it runs on a screen, he can build it perfectly! 🔥";
                 } else if (lowerText.includes('experience') || lowerText.includes('work')) {
-                    reply = "Right now he's rocking it as a Junior Flutter Developer at Summit Technology. Previously, he built 'Azume' and 'DigiFarmer' which actually won State Level awards! 🏆";
+                    reply = "He's currently a <b>Junior Flutter Developer</b> at Intellect Software Solutions. He's worked on big projects like Axis Direct Trader! 🏆";
                 } else if (lowerText.includes('education') || lowerText.includes('study') || lowerText.includes('college')) {
-                    reply = "He holds a degree in <b>Artificial Intelligence & Data Science</b> from Vidyavardhini's College of Engineering (2021-2025). Smart guy! 🧠";
+                    reply = "He holds a degree in <b>Artificial Intelligence & Data Science</b> from Vidyavardhini's College of Engineering (2021-2025). 🧠";
                 }
 
                 responseMsg.innerHTML = reply;
@@ -498,10 +497,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // Global function for prompt chips in floating chatbot
     // Using a more robust listener approach
     const setupChips = () => {
-        const chips = document.querySelectorAll('.chat-prompt-chip');
+        const chips = document.querySelectorAll('.floating-prompts .chat-prompt-chip');
         chips.forEach(chip => {
             const handleChip = (e) => {
-                if (e && e.cancelable) e.preventDefault(); // CRITICAL: Stop mobile from firing touchstart + click consecutively
+                if (e && e.cancelable) e.preventDefault();
                 const msg = chip.getAttribute('data-msg');
                 if (msg) window.sendFloatingMsg(msg);
             };
