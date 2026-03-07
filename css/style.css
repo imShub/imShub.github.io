@@ -2655,3 +2655,153 @@ section:not(#hero)::after {
     height: 90vh;
   }
 }
+
+/* --------------- VS CODE / IDE FLUTTER SHOWCASE --------------- */
+.ide-window {
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  background: #1e1e1e;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6), 0 0 20px rgba(66, 165, 245, 0.1);
+  transform-style: preserve-3d;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.ide-window:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 50px 100px rgba(0, 0, 0, 0.8), 0 0 40px rgba(138, 43, 226, 0.3);
+}
+
+.ide-header {
+  background: #252526;
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ide-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.ide-dots div {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+
+.ide-dot-red {
+  background: #ff5f56;
+}
+
+.ide-dot-yel {
+  background: #ffbd2e;
+}
+
+.ide-dot-grn {
+  background: #27c93f;
+}
+
+.ide-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  color: #858585;
+  text-align: center;
+  flex: 1;
+  padding-right: 50px;
+  /* Offset to keep title centered despite dots */
+}
+
+.ide-body {
+  display: flex;
+  background: #1e1e1e;
+}
+
+.ide-line-numbers {
+  padding: 20px 15px;
+  text-align: right;
+  color: #6e7681;
+  font-family: 'Fira Code', 'Courier New', Courier, monospace;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  user-select: none;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  background: #1e1e1e;
+}
+
+.ide-code {
+  padding: 20px;
+  font-family: 'Fira Code', 'Courier New', Courier, monospace;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #d4d4d4;
+  overflow-x: auto;
+  width: 100%;
+}
+
+/* Syntax Highlighting Tokens */
+.sy-keyword {
+  color: #569cd6;
+}
+
+/* Blue */
+.sy-class {
+  color: #4ec9b0;
+}
+
+/* Blue-green */
+.sy-method {
+  color: #dcdcaa;
+}
+
+/* Light yellow */
+.sy-string {
+  color: #ce9178;
+}
+
+/* Orange/Brown */
+.sy-comment {
+  color: #6a9955;
+  font-style: italic;
+}
+
+/* Green */
+.sy-prop {
+  color: #9cdcfe;
+}
+
+/* Light Blue */
+.sy-punct {
+  color: #d4d4d4;
+}
+
+.sy-op {
+  color: #c586c0;
+}
+
+/* Purple */
+
+.ide-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 18px;
+  background: #00E5FF;
+  animation: blinkCursor 1s infinite cubic-bezier(0.25, 1, 0.5, 1);
+  vertical-align: middle;
+  margin-left: 2px;
+}
+
+@keyframes blinkCursor {
+
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 0 5px #00E5FF;
+  }
+
+  50% {
+    opacity: 0;
+    box-shadow: none;
+  }
+}

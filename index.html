@@ -293,7 +293,7 @@
                     <strong>mobile app
                         development</strong> and transforming innovative ideas into functional, beautiful code.
                 </p>
-                <p style="margin-top: 1rem;">Beyond my coursework, I was a Technical Team Member of the E-Cell and a Dev
+                <p style="margin-top: 1rem;">Beyond my coursework, I was a Technical Team Head of the E-Cell and a Dev
                     Associate in the Microsoft Learn Students Club. Currently working as a Jr. Flutter Developer at
                     Intellect Software
                     Solutions, I focus on delivering seamless, user-friendly interfaces backed by robust back-end
@@ -641,47 +641,69 @@
         </div>
 
         <!-- Credentials & Leadership (New Section) -->
-        <div
-            style="margin-top: 8rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem;">
-            <!-- Education Box -->
-            <div class="reveal-up"
-                style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); padding: 2.5rem; border-radius: 24px; position: relative; overflow: hidden;">
-                <div style="position: absolute; top: 0; right: 0; padding: 20px; opacity: 0.1; font-size: 4rem;"><i
-                        class="fa-solid fa-graduation-cap"></i></div>
-                <h3 class="outfit-font" style="margin-bottom: 2rem; color: var(--accent-cyan);">Academic Excellence</h3>
-                <div style="margin-bottom: 2rem;">
-                    <div style="font-weight: 700; font-size: 1.1rem; color: #fff;">BE in AI & Data Science</div>
-                    <div style="color: var(--text-secondary); font-size: 0.9rem;">VCET, Mumbai University | 2021 – 2025
-                    </div>
-                    <div style="margin-top: 5px; color: var(--accent-purple); font-weight: 600;">CGPA: 7.55/10</div>
+        <!-- Credentials & Leadership (The Developer Flex IDE) -->
+        <div class="ide-window reveal-up mt-5" style="margin-top: 8rem; margin-bottom: 2rem;">
+            <!-- Window Header -->
+            <div class="ide-header">
+                <div class="ide-dots">
+                    <div class="ide-dot-red"></div>
+                    <div class="ide-dot-yel"></div>
+                    <div class="ide-dot-grn"></div>
                 </div>
-                <div>
-                    <div style="font-weight: 700; font-size: 1.1rem; color: #fff;">HSC (Computer Science)</div>
-                    <div style="color: var(--text-secondary); font-size: 0.9rem;">Bhavan's College | 2019 – 2021</div>
-                    <div style="margin-top: 5px; color: var(--accent-cyan); font-weight: 600;">89% in Pure Science</div>
-                </div>
+                <div class="ide-title">lib/profile/shubham.dart - VS Code</div>
             </div>
 
-            <!-- Leadership / Organizations Box -->
-            <div class="reveal-up delay-1"
-                style="background: rgba(255,255,255,0.03); border: 1px solid var(--border-color); padding: 2.5rem; border-radius: 24px; position: relative; overflow: hidden;">
-                <div style="position: absolute; top: 0; right: 0; padding: 20px; opacity: 0.1; font-size: 4rem;"><i
-                        class="fa-solid fa-users-gear"></i></div>
-                <h3 class="outfit-font" style="margin-bottom: 2rem; color: var(--accent-purple);">Leadership & Community
-                </h3>
-                <div style="margin-bottom: 1.5rem; display: flex; gap: 15px;">
-                    <div style="font-size: 1.5rem; color: #42A5F5;"><i class="fa-brands fa-microsoft"></i></div>
-                    <div>
-                        <div style="font-weight: 700; color: #fff;">Microsoft Learn Students Club</div>
-                        <div style="color: var(--text-secondary); font-size: 0.85rem;">Dev Associate (App Domain)</div>
-                    </div>
+            <!-- Editor Body -->
+            <div class="ide-body">
+                <!-- Line Numbers -->
+                <div class="ide-line-numbers">
+                    1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18
                 </div>
-                <div style="display: flex; gap: 15px;">
-                    <div style="font-size: 1.5rem; color: #FFBD2E;"><i class="fa-solid fa-rocket"></i></div>
-                    <div>
-                        <div style="font-weight: 700; color: #fff;">Team E-Cell VCET</div>
-                        <div style="color: var(--text-secondary); font-size: 0.85rem;">Technical Team Member</div>
-                    </div>
+
+                <!-- Code Area -->
+                <div class="ide-code">
+                    <span class="sy-comment">// Defining the architect of the future</span><br>
+                    <span class="sy-keyword">class</span> <span class="sy-class">Shubham</span> <span
+                        class="sy-keyword">extends</span> <span class="sy-class">SoftwareEngineer</span> <span
+                        class="sy-punct">{</span><br>
+                    &nbsp;&nbsp;<span class="sy-keyword">final</span> <span class="sy-class">String</span> <span
+                        class="sy-prop">university</span> <span class="sy-punct">=</span> <span class="sy-string">"VCET,
+                        Mumbai University"</span><span class="sy-punct">;</span><br>
+                    &nbsp;&nbsp;<span class="sy-keyword">final</span> <span class="sy-class">String</span> <span
+                        class="sy-prop">degree</span> <span class="sy-punct">=</span> <span class="sy-string">"BE in AI
+                        & Data Science"</span><span class="sy-punct">;</span><br>
+                    &nbsp;&nbsp;<span class="sy-keyword">final</span> <span class="sy-class">double</span> <span
+                        class="sy-prop">cgpa</span> <span class="sy-punct">=</span> <span class="sy-op">7.55</span><span
+                        class="sy-punct">;</span><br>
+                    &nbsp;&nbsp;<span class="sy-keyword">final</span> <span class="sy-class">String</span> <span
+                        class="sy-prop">hscScore</span> <span class="sy-punct">=</span> <span class="sy-string">"89%
+                        (Computer Science)"</span><span class="sy-punct">;</span><br>
+                    <br>
+                    &nbsp;&nbsp;<span class="sy-class">List</span><span class="sy-punct">&lt;</span><span
+                        class="sy-class">Role</span><span class="sy-punct">&gt;</span> <span
+                        class="sy-method">getLeadershipRoles</span><span class="sy-punct">()</span> <span
+                        class="sy-punct">{</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="sy-keyword">return</span> <span class="sy-punct">[</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sy-class">Role</span><span
+                        class="sy-punct">(</span><span class="sy-prop">organization:</span> <span
+                        class="sy-string">"Microsoft Learn Students Club"</span>, <span class="sy-prop">position:</span>
+                    <span class="sy-string">"Dev Associate (App)"</span><span class="sy-punct">)</span><span
+                        class="sy-punct">,</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="sy-class">Role</span><span
+                        class="sy-punct">(</span><span class="sy-prop">organization:</span> <span
+                        class="sy-string">"E-Cell VCET"</span>, <span class="sy-prop">position:</span> <span
+                        class="sy-string">"Technical Team Member"</span><span class="sy-punct">)</span><span
+                        class="sy-punct">,</span><br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;<span class="sy-punct">];</span><br>
+                    &nbsp;&nbsp;<span class="sy-punct">}</span><br>
+                    <br>
+                    &nbsp;&nbsp;<span class="sy-comment">// Returning true because true legends never stop
+                        building.</span><br>
+                    &nbsp;&nbsp;<span class="sy-class">bool</span> <span class="sy-method">isCurrentlyHiring</span><span
+                        class="sy-punct">()</span> <span class="sy-op">=></span> <span
+                        class="sy-keyword">true</span><span class="sy-punct">;</span><span
+                        class="ide-cursor"></span><br>
+                    <span class="sy-punct">}</span><br>
                 </div>
             </div>
         </div>
