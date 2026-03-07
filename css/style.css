@@ -116,15 +116,92 @@ ul {
 .loader-text {
   position: relative;
   color: transparent;
-  /* Cyan on the left, Faint on the right - we start by viewing the right half */
-  background: linear-gradient(to right, var(--accent-cyan) 50%, rgba(255, 255, 255, 0.05) 50%);
+  /* Premium elegant gradient blending Cyan, Purple, and a striking White/Pearl flash */
+  background: linear-gradient(to right,
+      var(--accent-cyan) 0%,
+      var(--accent-purple) 15%,
+      #ffffff 25%,
+      var(--accent-cyan) 35%,
+      #00E5FF 50%,
+      rgba(255, 255, 255, 0.05) 50%,
+      rgba(255, 255, 255, 0.05) 100%);
   background-size: 200% 100%;
   background-position: 100% 0;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: wipeText 1s cubic-bezier(0.8, 0, 0.2, 1) 1.6s forwards;
+  animation:
+    wipeText 1s cubic-bezier(0.8, 0, 0.2, 1) 1.6s forwards,
+    textGlow 2.5s ease-in-out 2.6s infinite alternate;
 }
+
+@keyframes textGlow {
+  0% {
+    filter: drop-shadow(0 0 5px rgba(66, 165, 245, 0.4));
+  }
+
+  100% {
+    filter: drop-shadow(0 0 25px rgba(138, 43, 226, 0.9));
+  }
+}
+
+/* --------------- ELEGANT SPARKLES --------------- */
+.loader-sparkle {
+  position: absolute;
+  color: #fff;
+  opacity: 0;
+  transform: scale(0) rotate(0deg);
+  z-index: 1;
+}
+
+.loader-sparkle.s1 {
+  top: -10%;
+  right: 5%;
+  font-size: clamp(1.2rem, 3vw, 2.5rem);
+  color: #FFBD2E;
+  filter: drop-shadow(0 0 15px #FFBD2E);
+  animation: popSparkle 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) 2s infinite;
+}
+
+.loader-sparkle.s2 {
+  bottom: 15%;
+  left: 10%;
+  font-size: clamp(0.8rem, 2vw, 1.5rem);
+  color: #00E5FF;
+  filter: drop-shadow(0 0 10px #00E5FF);
+  animation: popSparkle 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 2.6s infinite;
+}
+
+.loader-sparkle.s3 {
+  top: 40%;
+  left: 45%;
+  font-size: clamp(0.5rem, 1.5vw, 1rem);
+  color: var(--accent-purple);
+  filter: drop-shadow(0 0 10px var(--accent-purple));
+  animation: popSparkle 2s cubic-bezier(0.175, 0.885, 0.32, 1.275) 2.3s infinite;
+}
+
+@keyframes popSparkle {
+  0% {
+    transform: scale(0) rotate(0deg);
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1) rotate(90deg);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: scale(0) rotate(180deg);
+    opacity: 0;
+  }
+}
+
 
 .loader-flutter-icon {
   position: absolute;
