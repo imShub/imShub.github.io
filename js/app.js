@@ -370,7 +370,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else if (lowerText.includes('roast') || lowerText.includes('joke')) {
                     reply = "I'd roast you, but my creator told me to be professional... Just kidding, your last app crashed on launch didn't it? (Sorry, it's just a joke! 😂)";
                 } else if (lowerText.includes('flutter')) {
-                    reply = "Ah, Flutter. The supreme UI toolkit! Shubham breathes Widgets and StateManagement. 💙";
+                    reply = "Ah, Flutter. The supreme UI toolkit! Shubham breathes Widgets and StateManagement! 💙";
+                } else if (lowerText.includes('skill') || lowerText.includes('stack')) {
+                    reply = "He's a wizard with <b>Flutter, Dart, Firebase, and UI/UX Architecture</b>. Basically, if it runs on a screen, he can build it perfectly! 🔥";
+                } else if (lowerText.includes('experience') || lowerText.includes('work')) {
+                    reply = "Right now he's rocking it as a Junior Flutter Developer at Summit Technology. Previously, he built 'Azume' and 'DigiFarmer' which actually won State Level awards! 🏆";
+                } else if (lowerText.includes('education') || lowerText.includes('study') || lowerText.includes('college')) {
+                    reply = "He holds a degree in <b>Artificial Intelligence & Data Science</b> from Vidyavardhini's College of Engineering (2021-2025). Smart guy! 🧠";
                 }
 
                 responseMsg.innerHTML = reply;
@@ -473,9 +479,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 } else if (lowerText.includes('roast') || lowerText.includes('joke')) {
                     reply = "I'd roast you, but my creator told me to be professional... Just kidding, your last app crashed on launch didn't it? (Sorry, it's just a joke! 😂)";
                 } else if (lowerText.includes('flutter')) {
-                    reply = "Ah, Flutter. The supreme UI toolkit! Shubham breathes Widgets and StateManagement. 💙";
-                } else if (lowerText.includes('skill')) {
-                    reply = "He's a wizard with Flutter, Dart, Firebase, and UI/UX design. Basically, if it runs on a screen, he can build it!";
+                    reply = "Ah, Flutter. The supreme UI toolkit! Shubham breathes Widgets and StateManagement! 💙";
+                } else if (lowerText.includes('skill') || lowerText.includes('stack')) {
+                    reply = "He's a wizard with <b>Flutter, Dart, Firebase, and UI/UX Architecture</b>. Basically, if it runs on a screen, he can build it perfectly! 🔥";
+                } else if (lowerText.includes('experience') || lowerText.includes('work')) {
+                    reply = "Right now he's rocking it as a Junior Flutter Developer at Summit Technology. Previously, he built 'Azume' and 'DigiFarmer' which actually won State Level awards! 🏆";
+                } else if (lowerText.includes('education') || lowerText.includes('study') || lowerText.includes('college')) {
+                    reply = "He holds a degree in <b>Artificial Intelligence & Data Science</b> from Vidyavardhini's College of Engineering (2021-2025). Smart guy! 🧠";
                 }
 
                 responseMsg.innerHTML = reply;
@@ -491,11 +501,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const chips = document.querySelectorAll('.chat-prompt-chip');
         chips.forEach(chip => {
             const handleChip = (e) => {
+                if (e && e.cancelable) e.preventDefault(); // CRITICAL: Stop mobile from firing touchstart + click consecutively
                 const msg = chip.getAttribute('data-msg');
                 if (msg) window.sendFloatingMsg(msg);
             };
             chip.addEventListener('click', handleChip);
-            chip.addEventListener('touchstart', handleChip, { passive: true });
+            chip.addEventListener('touchstart', handleChip, { passive: false }); // Changed to false to allow preventDefault
         });
     };
 
@@ -561,7 +572,7 @@ function initPdfViewer() {
     }
 
     const hideModal = (e) => {
-        if (e) e.preventDefault();
+        if (e && e.cancelable) e.preventDefault();
         pdfModal.classList.remove('active');
         document.body.style.overflow = ''; // Unlock scrolling
     };
@@ -573,6 +584,7 @@ function initPdfViewer() {
 
     if (pdfBackdrop) {
         pdfBackdrop.addEventListener('click', hideModal);
+        // Note: keeping touchstart off backdrop to prevent accidental closures while scrolling edge cases
         pdfBackdrop.addEventListener('touchstart', hideModal, { passive: false });
     }
 
