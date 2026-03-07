@@ -2795,15 +2795,21 @@ section:not(#hero)::after {
 
 /* --------------- CHATBOT & PROMPT CHIPS --------------- */
 .chat-prompts {
-  display: flex;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
   gap: 12px;
   padding: 12px 20px;
-  overflow-x: auto;
+  overflow-x: auto !important;
+  overflow-y: hidden;
   scrollbar-width: none;
   background: rgba(255, 255, 255, 0.02);
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   -ms-overflow-style: none;
   scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  /* Momentum scroll for iOS */
+  width: 100%;
 }
 
 .chat-prompts::-webkit-scrollbar {
@@ -2828,6 +2834,8 @@ section:not(#hero)::after {
   backdrop-filter: blur(8px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   user-select: none;
+  flex-shrink: 0;
+  /* CRITICAL: Prevent chips from shrinking so they force horizontal scroll */
 }
 
 .chat-prompt-chip:hover {
@@ -2844,16 +2852,22 @@ section:not(#hero)::after {
 }
 
 .floating-prompts {
-  display: flex;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
   gap: 12px;
   padding: 12px 15px;
   background: rgba(0, 0, 0, 0.4);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  overflow-x: auto;
+  overflow-x: auto !important;
+  overflow-y: hidden;
   scrollbar-width: none;
   flex-shrink: 0;
   position: relative;
-  /* Standard positioning in the flex stack */
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+  mask-image: linear-gradient(to right, black 85%, transparent 100%);
+  /* Fade effect at end */
 }
 
 .floating-prompts::-webkit-scrollbar {
