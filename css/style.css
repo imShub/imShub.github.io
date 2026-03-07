@@ -2245,16 +2245,14 @@ section:not(#hero)::after {
 }
 
 .chatbot-window {
-  width: 350px;
-  max-width: 90vw;
-  /* Fix for mobile screens */
-  height: 500px;
-  max-height: 70vh;
-  /* Better vertical space management */
+  width: 380px;
+  max-width: 95vw;
+  height: 600px;
+  max-height: 80vh;
   background: var(--bg-surface);
   border: 1px solid var(--border-color);
   border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -2264,9 +2262,9 @@ section:not(#hero)::after {
   pointer-events: none;
   transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
   position: fixed;
-  bottom: 100px;
+  bottom: 110px;
   right: 30px;
-  z-index: 1000;
+  z-index: 10000;
 }
 
 .chatbot-window.active {
@@ -2277,10 +2275,10 @@ section:not(#hero)::after {
 
 @media (max-width: 576px) {
   .chatbot-window {
-    right: 5vw;
+    right: 2.5vw;
     bottom: 90px;
-    width: 90vw;
-    height: 450px;
+    width: 95vw;
+    max-height: 75vh;
   }
 }
 
@@ -2816,20 +2814,14 @@ section:not(#hero)::after {
 /* --------------- CHATBOT & PROMPT CHIPS --------------- */
 .chat-prompts {
   display: flex !important;
-  flex-direction: row !important;
-  flex-wrap: nowrap !important;
-  gap: 12px;
-  padding: 12px 20px;
-  overflow-x: auto !important;
-  overflow-y: hidden;
-  scrollbar-width: none;
+  flex-wrap: wrap !important;
+  /* ALLOW WRAPPING - NO SCROLL NEEDED */
+  gap: 8px;
+  padding: 12px 15px;
   background: rgba(255, 255, 255, 0.02);
   border-top: 1px solid rgba(255, 255, 255, 0.05);
-  -ms-overflow-style: none;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  /* Momentum scroll for iOS */
   width: 100%;
+  justify-content: flex-start;
 }
 
 .chat-prompts::-webkit-scrollbar {
@@ -2838,26 +2830,24 @@ section:not(#hero)::after {
 
 .chat-prompt-chip {
   white-space: nowrap;
-  padding: 6px 14px;
-  /* Reduced padding */
-  border-radius: 20px;
+  padding: 5px 10px;
+  /* Ultra-compact */
+  border-radius: 15px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.1);
   font-family: 'Outfit', sans-serif;
-  font-size: 0.75rem;
-  /* Smaller font for better density */
-  font-weight: 600;
+  font-size: 0.7rem;
+  /* Smaller for wrap visibility */
+  font-weight: 500;
   cursor: pointer;
   color: var(--text-primary);
-  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: all 0.2s ease;
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 4px;
   backdrop-filter: blur(8px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   user-select: none;
   flex-shrink: 0;
-  /* CRITICAL: Prevent chips from shrinking so they force horizontal scroll */
 }
 
 .chat-prompt-chip:hover {
@@ -2875,21 +2865,13 @@ section:not(#hero)::after {
 
 .floating-prompts {
   display: flex !important;
-  flex-direction: row !important;
-  flex-wrap: nowrap !important;
-  gap: 12px;
-  padding: 12px 15px;
+  flex-wrap: wrap !important;
+  /* ALLOW WRAPPING */
+  gap: 6px;
+  padding: 10px;
   background: rgba(0, 0, 0, 0.4);
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  overflow-x: auto !important;
-  overflow-y: hidden;
-  scrollbar-width: none;
-  flex-shrink: 0;
-  position: relative;
-  -webkit-overflow-scrolling: touch;
   width: 100%;
-  mask-image: linear-gradient(to right, black 85%, transparent 100%);
-  /* Fade effect at end */
 }
 
 .floating-prompts::-webkit-scrollbar {
